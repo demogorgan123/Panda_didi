@@ -732,7 +732,7 @@ export function getStandaloneHtml(): string {
       const p = photos[currentPhotoIdx];
       document.getElementById('lb-img').src = p.url;
       document.getElementById('lb-img').alt = p.alt;
-      document.getElementById('lb-badge').innerText = '#' + p.id + ' • ' + p.categoryLabel;
+      document.getElementById('lb-badge').innerText = '#' + p.id + ' • ' + (p.vibe || 'Panda Memory');
       document.getElementById('lb-title').innerText = p.title;
       document.getElementById('lb-caption').innerText = '“' + p.caption + '”';
       document.getElementById('lb-date').innerText = p.date + (p.location ? ' • ' + p.location : '');

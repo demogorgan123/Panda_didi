@@ -1,47 +1,46 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { PhotoItem } from '../types';
-import { GALLERY_PHOTOS } from '../data/galleryData';
-import { Heart, Maximize2, X, ChevronLeft, ChevronRight, Calendar, MapPin, Sparkles, Filter } from 'lucide-react';
+import { GALLERY_PHOTOS, DRIVE_VIDEOS } from '../data/galleryData';
+import { 
+  Heart, 
+  Maximize2, 
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  Calendar, 
+  Sparkles, 
+  Play, 
+  Video
+} from 'lucide-react';
 import { sounds } from '../utils/audio';
 
 export const PhotoGallery: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  // Active video index from DRIVE_VIDEOS
+  const [activeVideoIndex, setActiveVideoIndex] = useState<number>(0);
+
+  // Selected photo index for lightbox
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
+
+  // Likes state
   const [likes, setLikes] = useState<Record<number, number>>({
-    1: 42,
-    2: 58,
-    3: 39,
-    4: 64,
-    5: 81,
-    6: 49,
-    7: 35,
-    8: 91,
-    9: 44,
-    10: 73,
-    11: 67,
-    12: 52,
-    13: 88,
-    14: 61,
-    15: 75,
-    16: 46,
-    17: 59,
-    18: 68,
-    19: 94,
-    20: 120,
+    1: 48,
+    2: 65,
+    3: 42,
+    4: 71,
+    5: 89,
+    6: 53,
+    7: 38,
+    8: 96,
+    9: 50,
+    10: 79,
+    11: 72,
+    12: 58,
+    13: 94,
+    14: 67,
+    15: 112,
+    16: 135,
   });
 
-  const categories = [
-    { id: 'all', label: 'All Photos' },
-    { id: 'sister', label: 'Sister Instincts 🛡️' },
-    { id: 'midnight', label: 'Midnight Calls 🌙' },
-    { id: 'food_sleep', label: 'Food & Sleep 🎋' },
-    { id: 'chaos', label: 'Pure Chaos ⚡' },
-    { id: 'milestone', label: 'Milestones 🌸' },
-  ];
-
-  const filteredPhotos = activeCategory === 'all'
-    ? GALLERY_PHOTOS
-    : GALLERY_PHOTOS.filter((p) => p.category === activeCategory);
+  const activeVideo = DRIVE_VIDEOS[activeVideoIndex];
 
   const openLightbox = (id: number) => {
     const idx = GALLERY_PHOTOS.findIndex((p) => p.id === id);
@@ -103,41 +102,145 @@ export const PhotoGallery: React.FC = () => {
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 border border-emerald-500/20">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>The Memory Archive</span>
+          <span>The Memory Archive • {DRIVE_VIDEOS.length + GALLERY_PHOTOS.length} Total Moments</span>
         </div>
         <h2 className="font-display text-3xl sm:text-5xl font-bold text-neutral-100 tracking-tight mb-4">
-          Unforgettable Panda Moments 📸
+          Panda's 22nd Birthday Memories 🎬
         </h2>
         <p className="text-neutral-400 text-base sm:text-lg">
-          Dedicated to Panda on her 22nd birthday: from impromptu midnight nostalgia calls to hot-pot feasts, hilarious life advice, and endless laughter. Click on any photo to view in high resolution with memory notes.
+          Dedicated to Panda on her 22nd birthday: {DRIVE_VIDEOS.length} live video clips and {GALLERY_PHOTOS.length} candid photos preserved exclusively from the Google Drive memory archive.
         </p>
+      </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mt-8">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              id={`filter-btn-${cat.id}`}
-              onClick={() => {
-                sounds.playChime();
-                setActiveCategory(cat.id);
-              }}
-              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all cursor-pointer ${
-                activeCategory === cat.id
-                  ? 'bg-emerald-500 text-neutral-950 font-bold shadow-md shadow-emerald-500/20 scale-105'
-                  : 'bg-neutral-800/80 hover:bg-neutral-700/80 text-neutral-300 border border-neutral-700/80'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+      {/* ========================================================================= */}
+      {/* 1. TOP OF MEMORIES: GOOGLE DRIVE VIDEO FILES (FIRST THING VISITORS SEE)   */}
+      {/* ========================================================================= */}
+      <div className="mb-16 bg-gradient-to-b from-neutral-900/90 to-neutral-900/50 rounded-3xl p-5 sm:p-8 border border-neutral-800 shadow-2xl backdrop-blur-sm">
+        {/* Videos Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-neutral-800 mb-6">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-1">
+              <Video className="w-4 h-4 text-emerald-400" />
+              <span>Video Archive • Birthday Clips</span>
+            </div>
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-neutral-100">
+              Live Video Clips of Panda 🎥
+            </h3>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="text-xs px-3 py-1.5 rounded-full bg-neutral-800/90 border border-neutral-700 text-neutral-300 font-medium">
+              5 Live Moments
+            </span>
+          </div>
+        </div>
+
+        {/* Active Featured Video Player */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          {/* Main Video Frame */}
+          <div className="lg:col-span-8 bg-black rounded-2xl overflow-hidden border border-neutral-800 shadow-xl relative aspect-video flex items-center justify-center">
+            <iframe
+              src={`https://drive.google.com/file/d/${activeVideo.driveId}/preview`}
+              className="w-full h-full border-0"
+              allow="autoplay; encrypted-media; fullscreen"
+              allowFullScreen
+              title={activeVideo.title}
+            />
+          </div>
+
+          {/* Active Video Info & Playlist */}
+          <div className="lg:col-span-4 flex flex-col justify-between space-y-4">
+            {/* Active Video Details */}
+            <div className="bg-neutral-800/60 rounded-2xl p-5 border border-neutral-700/70">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="px-2.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
+                  Video {activeVideo.id} of {DRIVE_VIDEOS.length}
+                </span>
+                <span className="text-xs text-neutral-400 font-mono">
+                  {activeVideo.size}
+                </span>
+              </div>
+
+              <h4 className="font-display font-bold text-lg text-neutral-100 mb-1.5">
+                {activeVideo.title}
+              </h4>
+              <p className="text-xs text-neutral-400 mb-3 font-mono">
+                {activeVideo.fileName} • {activeVideo.date}
+              </p>
+              <p className="text-sm text-neutral-300 leading-relaxed">
+                {activeVideo.caption}
+              </p>
+            </div>
+
+            {/* Quick Video Switcher Strip */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-2">
+                Select Video Clip:
+              </p>
+              <div className="space-y-2">
+                {DRIVE_VIDEOS.map((vid, index) => {
+                  const isActive = index === activeVideoIndex;
+                  return (
+                    <button
+                      key={vid.id}
+                      type="button"
+                      onClick={() => {
+                        sounds.playChime();
+                        setActiveVideoIndex(index);
+                      }}
+                      className={`w-full text-left p-3 rounded-xl border transition-all flex items-center gap-3 cursor-pointer ${
+                        isActive
+                          ? 'bg-emerald-500/15 border-emerald-500/60 shadow-md shadow-emerald-500/10'
+                          : 'bg-neutral-800/40 hover:bg-neutral-800/80 border-neutral-700/60 text-neutral-300'
+                      }`}
+                    >
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
+                        isActive ? 'bg-emerald-500 text-neutral-950 font-bold' : 'bg-neutral-700 text-neutral-300'
+                      }`}>
+                        <Play className="w-3.5 h-3.5 fill-current" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <div className="text-xs sm:text-sm font-semibold text-neutral-100 truncate">
+                          {vid.title}
+                        </div>
+                        <div className="text-[11px] text-neutral-400 truncate">
+                          {vid.date} • {vid.size}
+                        </div>
+                      </div>
+                      {isActive && (
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 shrink-0">
+                          Playing
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Masonry / Responsive Grid (20 Photos) */}
+      {/* ========================================================================= */}
+      {/* 2. CANDID PHOTO MEMORIES (STREAMLINED SINGLE-FLOW LAYOUT, NO CATEGORIES)  */}
+      {/* ========================================================================= */}
+      <div className="mb-8 flex items-center justify-between pb-4 border-b border-neutral-800">
+        <div>
+          <h3 className="font-display text-2xl font-bold text-neutral-100 flex items-center gap-2">
+            <span>Candid Photo Memories</span>
+            <span className="text-xs font-mono font-normal px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-400 border border-neutral-700">
+              {GALLERY_PHOTOS.length} photos
+            </span>
+          </h3>
+          <p className="text-xs sm:text-sm text-neutral-400 mt-0.5">
+            A single-flow stream of authentic moments, laughing fits, and sisterly wisdom.
+          </p>
+        </div>
+      </div>
+
+      {/* Masonry / Responsive Grid (Streamlined Single-Flow) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        {filteredPhotos.map((photo) => {
+        {GALLERY_PHOTOS.map((photo) => {
           const isLiked = (likes[photo.id] || 0) > 0;
           return (
             <div
@@ -155,13 +258,6 @@ export const PhotoGallery: React.FC = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
 
-                {/* Top Badge: Category */}
-                <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10">
-                  <span className="px-2.5 py-1 rounded-full bg-neutral-950/80 backdrop-blur-md text-[11px] font-semibold text-emerald-300 border border-emerald-500/30">
-                    {photo.categoryLabel}
-                  </span>
-                </div>
-
                 {/* Hover overlay hint */}
                 <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
                   <div className="p-2.5 rounded-full bg-neutral-900/90 text-neutral-100 border border-neutral-700 transform scale-75 group-hover:scale-100 transition-transform">
@@ -177,12 +273,12 @@ export const PhotoGallery: React.FC = () => {
                 </div>
               </div>
 
-              {/* Photo Information & Caption */}
+              {/* Photo Information & Caption (Clean, No Category Tags) */}
               <div className="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-display font-semibold text-base text-neutral-100 group-hover:text-emerald-300 transition-colors line-clamp-1 mb-1.5">
+                  <h4 className="font-display font-semibold text-base text-neutral-100 group-hover:text-emerald-300 transition-colors line-clamp-1 mb-1.5">
                     {photo.title}
-                  </h3>
+                  </h4>
                   <p className="text-xs text-neutral-400 leading-relaxed line-clamp-3 mb-3">
                     {photo.caption}
                   </p>
@@ -199,7 +295,7 @@ export const PhotoGallery: React.FC = () => {
                     type="button"
                     id={`like-btn-${photo.id}`}
                     onClick={(e) => handleLike(photo.id, e)}
-                    className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-neutral-700/60 text-neutral-300 hover:text-rose-400 transition-colors"
+                    className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-neutral-700/60 text-neutral-300 hover:text-rose-400 transition-colors cursor-pointer"
                   >
                     <Heart className={`w-3.5 h-3.5 ${isLiked ? 'text-rose-400 fill-rose-400' : ''}`} />
                     <span className="font-semibold text-xs">{likes[photo.id] || 0}</span>
@@ -211,7 +307,7 @@ export const PhotoGallery: React.FC = () => {
         })}
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal (Streamlined, No Category Badges) */}
       {activeLightboxPhoto && (
         <div
           role="dialog"
@@ -228,9 +324,9 @@ export const PhotoGallery: React.FC = () => {
             <div className="flex items-center justify-between px-5 py-3.5 border-b border-neutral-800 bg-neutral-900/90">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                  {activeLightboxPhoto.categoryLabel}
+                  Memory #{activeLightboxPhoto.id}
                 </span>
-                <span className="text-xs text-neutral-400 hidden sm:inline">
+                <span className="text-xs text-neutral-400">
                   {activeLightboxPhoto.vibe}
                 </span>
               </div>
@@ -240,7 +336,7 @@ export const PhotoGallery: React.FC = () => {
                   type="button"
                   id="lightbox-close-btn"
                   onClick={closeLightbox}
-                  className="p-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors"
+                  className="p-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 hover:text-white transition-colors cursor-pointer"
                   title="Close (Esc)"
                 >
                   <X className="w-5 h-5" />
@@ -283,49 +379,40 @@ export const PhotoGallery: React.FC = () => {
               {/* Sidebar Description & Memory Details */}
               <div className="w-full md:w-80 p-5 bg-neutral-900 border-t md:border-t-0 md:border-l border-neutral-800 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-semibold text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/20">
-                      {activeLightboxPhoto.vibe}
-                    </span>
-                  </div>
-
                   <h3 className="font-display text-xl font-bold text-neutral-100 mb-3">
                     {activeLightboxPhoto.title}
                   </h3>
 
-                  <div className="font-handwriting text-neutral-200 text-lg sm:text-xl leading-relaxed bg-neutral-800/40 p-4 rounded-xl border border-neutral-700/60 mb-4">
+                  <div className="text-neutral-200 text-base leading-relaxed bg-neutral-800/40 p-4 rounded-xl border border-neutral-700/60 mb-4">
                     “{activeLightboxPhoto.caption}”
                   </div>
 
                   <div className="space-y-2 text-xs text-neutral-400">
                     <div className="flex items-center gap-2">
-                      <Calendar className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <Calendar className="w-3.5 h-3.5 text-emerald-400" />
                       <span>{activeLightboxPhoto.date}</span>
                     </div>
                     {activeLightboxPhoto.location && (
                       <div className="flex items-center gap-2">
-                        <MapPin className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                        <span className="text-amber-400">📍</span>
                         <span>{activeLightboxPhoto.location}</span>
                       </div>
                     )}
                   </div>
                 </div>
 
-                {/* Footer Controls in Lightbox */}
                 <div className="pt-4 border-t border-neutral-800 mt-6 flex items-center justify-between">
+                  <span className="text-xs text-neutral-500">
+                    Use Left / Right arrow keys to navigate
+                  </span>
                   <button
                     type="button"
-                    id={`lightbox-like-${activeLightboxPhoto.id}`}
                     onClick={(e) => handleLike(activeLightboxPhoto.id, e)}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 transition-all font-semibold text-xs cursor-pointer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold transition-colors cursor-pointer"
                   >
-                    <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
-                    <span>Love this memory ({likes[activeLightboxPhoto.id] || 0})</span>
+                    <Heart className={`w-4 h-4 ${(likes[activeLightboxPhoto.id] || 0) > 0 ? 'text-rose-400 fill-rose-400' : ''}`} />
+                    <span>{likes[activeLightboxPhoto.id] || 0}</span>
                   </button>
-
-                  <span className="text-[11px] text-neutral-400 italic">
-                    Press ← / → keys
-                  </span>
                 </div>
               </div>
             </div>

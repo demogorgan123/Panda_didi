@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Phone, PhoneOff, PhoneCall, Moon, Volume2, Sparkles, MessageCircle, Play } from 'lucide-react';
 import { MIDNIGHT_SCENARIOS } from '../data/insideJokes';
+import { GALLERY_PHOTOS } from '../data/galleryData';
 import { sounds } from '../utils/audio';
 import { triggerPandaShower } from './PandaEffects';
 
 export const MidnightCallWidget: React.FC = () => {
   const [selectedScenarioId, setSelectedScenarioId] = useState<number>(1);
   const [callStatus, setCallStatus] = useState<'idle' | 'ringing' | 'active'>('idle');
+
+  // Contact avatar from Photo ID 8
+  const contactPhoto = GALLERY_PHOTOS.find((p) => p.id === 8)?.url || 'https://lh3.googleusercontent.com/d/1d5cqu0hy-lM73XdVPQtMWsh6Oa5dD41Z=w1000';
 
   const scenario = MIDNIGHT_SCENARIOS.find((s) => s.id === selectedScenarioId) || MIDNIGHT_SCENARIOS[0];
 
@@ -94,8 +98,16 @@ export const MidnightCallWidget: React.FC = () => {
         {/* Call Content */}
         {callStatus === 'idle' && (
           <div className="text-center py-8">
-            <div className="w-24 h-24 mx-auto rounded-full bg-neutral-800 border-2 border-dashed border-neutral-600 flex items-center justify-center text-4xl mb-4 shadow-inner">
-              🐼
+            <div className="relative w-24 h-24 mx-auto mb-4">
+              <img
+                src={contactPhoto}
+                alt="Panda Contact Portrait"
+                referrerPolicy="no-referrer"
+                className="w-24 h-24 rounded-full object-cover border-2 border-neutral-600 shadow-xl shadow-neutral-950/60"
+              />
+              <span className="absolute bottom-0 right-0 w-6 h-6 bg-neutral-900 border border-neutral-700 rounded-full flex items-center justify-center text-xs shadow">
+                🐼
+              </span>
             </div>
             <h3 className="font-display text-xl font-bold text-neutral-100">
               Panda 🐼
@@ -118,8 +130,17 @@ export const MidnightCallWidget: React.FC = () => {
 
         {callStatus === 'ringing' && (
           <div className="text-center py-6 animate-pulse">
-            <div className="w-24 h-24 mx-auto rounded-full bg-rose-500/20 border-2 border-rose-500 flex items-center justify-center text-4xl mb-4 shadow-lg shadow-rose-500/40">
-              🐼
+            <div className="relative w-24 h-24 mx-auto mb-4">
+              <div className="absolute -inset-2 rounded-full bg-rose-500/30 animate-ping" />
+              <img
+                src={contactPhoto}
+                alt="Panda Calling"
+                referrerPolicy="no-referrer"
+                className="relative w-24 h-24 rounded-full object-cover border-2 border-rose-500 shadow-2xl shadow-rose-500/50"
+              />
+              <span className="absolute bottom-0 right-0 w-6 h-6 bg-rose-500 rounded-full border border-rose-300 flex items-center justify-center text-xs shadow">
+                🐼
+              </span>
             </div>
             <h3 className="font-display text-2xl font-bold text-neutral-100">
               Panda 🐼
@@ -159,10 +180,18 @@ export const MidnightCallWidget: React.FC = () => {
         {callStatus === 'active' && (
           <div className="py-2">
             <div className="flex items-center justify-between border-b border-neutral-800 pb-3 mb-4">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🐼</span>
+              <div className="flex items-center gap-3">
+                <img
+                  src={contactPhoto}
+                  alt="Panda"
+                  referrerPolicy="no-referrer"
+                  className="w-10 h-10 rounded-full object-cover border border-emerald-500/70"
+                />
                 <div>
-                  <h4 className="font-bold text-sm text-neutral-100">Panda (Big Sis)</h4>
+                  <h4 className="font-bold text-sm text-neutral-100 flex items-center gap-1">
+                    <span>Panda (Big Sis)</span>
+                    <span className="text-xs">🐼</span>
+                  </h4>
                   <p className="text-[11px] text-emerald-400 font-mono">00:01 • Connected</p>
                 </div>
               </div>
