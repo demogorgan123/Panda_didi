@@ -1,0 +1,6 @@
+{
+  "name": "Panda's Birthday Gallery",
+  "description": "A personalized, interactive 22nd birthday tribute and photo gallery for my elder sister on 13th September—whom only I get to call Panda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
