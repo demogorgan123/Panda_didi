@@ -98,10 +98,10 @@ export const MidnightCallWidget: React.FC = () => {
               🐼
             </div>
             <h3 className="font-display text-xl font-bold text-neutral-100">
-              Panda 🐼 (My Elder Sister)
+              Panda 🐼
             </h3>
             <p className="text-xs text-neutral-400 mt-1 mb-6">
-              Only I call her Panda • Looking through old photos in bed
+              Status: In bed scrolling through old memories at 00:23 AM 🌙
             </p>
 
             <button

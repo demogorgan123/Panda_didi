@@ -106,10 +106,10 @@ export const PhotoGallery: React.FC = () => {
           <span>The Memory Archive</span>
         </div>
         <h2 className="font-display text-3xl sm:text-5xl font-bold text-neutral-100 tracking-tight mb-4">
-          Unforgettable Moments With My Big Sister
+          Unforgettable Panda Moments 📸
         </h2>
         <p className="text-neutral-400 text-base sm:text-lg">
-          From impromptu midnight nostalgia calls to hot-pot comas and life advice. To everyone else she is an elder sister—to me, she will forever be Panda. Click on any photo to view in high resolution with memory notes.
+          Dedicated to Panda on her 22nd birthday: from impromptu midnight nostalgia calls to hot-pot feasts, hilarious life advice, and endless laughter. Click on any photo to view in high resolution with memory notes.
         </p>
 
         {/* Category Filters */}

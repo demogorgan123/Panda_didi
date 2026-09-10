@@ -17,10 +17,10 @@ export const Footer: React.FC = () => {
           </div>
           <div>
             <p className="font-display font-bold text-neutral-200 text-sm">
-              Dedicated to My Elder Sister's 22nd Birthday • 13th September 🎂
+              Dedicated to Panda's 22nd Birthday • 13th September 🎂
             </p>
             <p className="text-xs text-neutral-400">
-              She is my elder sister, and only I get to call her Panda 🐼
+              This website was made with love for Panda — happy 22nd birthday! 🐼❤️
             </p>
           </div>
         </div>

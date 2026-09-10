@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
               Panda<span className="text-emerald-400">.</span>22nd
             </span>
             <span className="hidden sm:block text-[11px] font-medium text-emerald-400/90 -mt-1 tracking-wider uppercase">
-              13th September • My Elder Sister
+              13th September • Happy Birthday Panda!
             </span>
           </div>
         </a>

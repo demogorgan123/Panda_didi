@@ -88,8 +88,8 @@ export const Hero: React.FC = () => {
         {/* Panda Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-800/90 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
           <span className="text-base animate-bounce">🎋</span>
-          <span>13th September • Turning 22 • My Elder Sister (Only I Call Her Panda)</span>
-          <span className="text-base">🐼</span>
+          <span>13th September • Turning 22 • Happy Birthday Panda! 🐼</span>
+          <span className="text-base">🎂</span>
         </div>
 
         {/* Hero Title */}
@@ -103,11 +103,10 @@ export const Hero: React.FC = () => {
 
         {/* Subtitle with deep persona context */}
         <p className="max-w-2xl mx-auto text-base sm:text-xl text-neutral-300 font-normal leading-relaxed mb-8">
-          Celebrating <strong className="text-emerald-300 font-semibold">22 legendary years</strong> of my elder sister! 
-          To the rest of the world, you're the mature, responsible one—<span className="text-emerald-300 font-semibold underline decoration-emerald-500/50">but only I get to call you Panda</span>. 
+          Celebrating <strong className="text-emerald-300 font-semibold">22 legendary years</strong> of Panda! 
           The mastermind of <span className="text-emerald-300 font-medium">smart-working shortcuts</span>, 
-          the reigning hot pot champion, and the only person allowed to wake me up with a <span className="text-amber-300 font-medium">00:00 AM random nostalgia call</span>. 
-          You will always be my protector, my compass, and my favorite big sister.
+          the reigning hot pot champion, my fiercely protective big sister, and the queen of <span className="text-amber-300 font-medium">00:00 AM random nostalgia calls</span>. 
+          This entire website is dedicated to you, Panda!
         </p>
 
         {/* Key Persona Badges */}
@@ -118,7 +117,7 @@ export const Hero: React.FC = () => {
           </div>
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>My Elder Sister & Protector</span>
+            <span>Fierce Sister & Protector</span>
           </div>
           <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
             <Flame className="w-4 h-4 text-amber-400" />
@@ -231,8 +230,8 @@ export const Hero: React.FC = () => {
           <p className="text-xs text-neutral-400 mt-3 italic">
             {timerMode === 'countdown'
               ? (isToday 
-                  ? '🎉 TODAY IS SEPTEMBER 13TH! Happy 22nd Birthday to my incredible elder sister Panda! 🎂🐼' 
-                  : 'Counting down every second until September 13th when my elder sister officially turns 22! 🎂')
+                  ? '🎉 TODAY IS SEPTEMBER 13TH! Happy 22nd Birthday to Panda! 🎂🐼' 
+                  : 'Counting down every second until September 13th when Panda officially turns 22! 🎂')
               : 'Over 2,000+ days of your chaotic laughter, warm hugs, and zero regrets! ❤️'}
           </p>
         </div>

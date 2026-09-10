@@ -82,7 +82,7 @@ export const PandaFactGenerator: React.FC = () => {
           The 39 Panda Truths & Inside Jokes 🎋
         </h2>
         <p className="text-neutral-400 text-sm sm:text-base">
-          Exactly 39 reasons why my elder sister is iconic—and why only I get to call her Panda.
+          39 reasons why Panda is iconic, hilarious, deeply loved, and the undisputed queen of September 13th.
         </p>
       </div>
 

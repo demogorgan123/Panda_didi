@@ -17,10 +17,10 @@ export const PandaStory: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-300 text-xs font-semibold uppercase tracking-wider mb-3 border border-rose-500/20">
             <Heart className="w-3.5 h-3.5 fill-rose-400" />
-            <span>A 22nd Birthday Sisterly Tribute</span>
+            <span>Dedicated to Panda on Her 22nd Birthday</span>
           </div>
           <h2 className="font-display text-3xl sm:text-5xl font-bold text-neutral-100 tracking-tight mb-4">
-            My Elder Sister, My Panda 🐼
+            Happy 22nd Birthday, Panda! 🐼
           </h2>
           <p className="text-neutral-400 text-base sm:text-lg">
             Celebrating 22 years of the loudest, sweetest, cleverest big sister on September 13th.
@@ -35,18 +35,18 @@ export const PandaStory: React.FC = () => {
               <span className="text-3xl">💌</span>
               <div>
                 <h3 className="font-display text-lg font-bold text-neutral-100">
-                  To My Elder Sister Turning 22,
+                  To Panda, With All My Love,
                 </h3>
-                <p className="text-xs text-neutral-400">Written for 13th September from the only person allowed to call you Panda</p>
+                <p className="text-xs text-neutral-400">Written for 13th September to celebrate your 22nd birthday</p>
               </div>
             </div>
 
             <p>
-              To everyone else in the world, you are the mature, accomplished, protective older sister figure. But between you and me, you didn't just become an anchor—you became my <strong className="text-emerald-300">Panda</strong>, and only I get to call you that.
+              Happy 22nd Birthday to the one and only <strong className="text-emerald-300">Panda</strong>!
             </p>
 
             <p>
-              You embody the spirit of a panda in the most endearing way imaginable: you possess an Olympic-level dedication to eating and sleeping, yet whenever I'm having a tough day, you move with ferocious speed to protect and cheer me up. As my elder sister, you naturally look out for me. You make sure I eat, you check that I got home safely, and you never let anyone walk over me.
+              You embody the spirit of a panda in the most endearing way imaginable: you possess an Olympic-level dedication to eating and sleeping, yet whenever I need you, you move with ferocious speed to protect and cheer me up. As my elder sister, you always look out for me. You make sure I eat, you check that I got home safely, and you never let anyone walk over me.
             </p>
 
             <div className="p-4 rounded-xl bg-neutral-800/60 border-l-4 border-amber-400 my-4 text-neutral-200 font-medium italic text-base">

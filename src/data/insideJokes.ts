@@ -35,10 +35,10 @@ export const PANDA_FACTS: InsideJoke[] = [
   },
   {
     id: 5,
-    badge: "EXCLUSIVE NICKNAME 🐼",
-    title: "Only I Get To Call Her Panda",
-    quote: "'Nobody else in this entire universe is authorized to call me Panda except my younger sibling. Anyone else tries it, they get blocked.'",
-    context: "To everyone else, she is the poised elder sister. But between the two of us, she is and will always remain my Panda.",
+    badge: "THE NICKNAME 🐼",
+    title: "Why She Is Our Panda",
+    quote: "'I am 10% awake, 40% looking for food, and 50% calculating how to finish work in 20 minutes so I can take a nap.'",
+    context: "She embodies the spirit of a panda in the most endearing way: peaceful, lovable, stubborn about good food, and fiercely protective of her favorite people.",
     reactionCount: 188
   },
   {
