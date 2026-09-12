@@ -10,15 +10,15 @@ export interface DriveVideoItem {
 
 export interface PhotoItem {
   id: number;
-  title: string;
-  category?: 'sister' | 'chaos' | 'food_sleep' | 'midnight' | 'milestone';
-  categoryLabel?: string;
   url: string;
   alt: string;
-  caption: string;
   date: string;
   location?: string;
-  vibe: string;
+  title?: string;
+  caption?: string;
+  vibe?: string;
+  category?: 'sister' | 'chaos' | 'food_sleep' | 'midnight' | 'milestone';
+  categoryLabel?: string;
 }
 
 export interface InsideJoke {

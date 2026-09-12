@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
             id="nav-gallery-link"
             className="px-3 py-1.5 rounded-md hover:text-emerald-300 hover:bg-neutral-800/60 transition-colors"
           >
-            Memories
+            Classic Moments
           </a>
           <a 
             href="#midnight-calls" 

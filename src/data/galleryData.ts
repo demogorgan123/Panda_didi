@@ -15,37 +15,37 @@ export const DRIVE_VIDEOS: DriveVideoItem[] = [
     id: 1,
     driveId: "1QC64gFI-rcul1TRSnhVuZYBP8h6jWMPI",
     fileName: "VID-20260319-WA0028.mp4",
-    title: "March Laughs & Spontaneous Energy",
+    title: "Batch of Honour - Agas26",
     date: "19 March 2026",
     size: "3.9 MB",
-    caption: "Classic spontaneous Panda laughter and candid sibling banter caught on camera."
+    caption: "Kaand? do sports kaand follows my brotherr."
   },
   {
     id: 2,
     driveId: "1Wz2busX11YZhsd77eYwA14DmMr_1ovYo",
     fileName: "VID-20260430-WA0255.mp4",
-    title: "April Shenanigans (Part 1)",
+    title: "Parihar with army",
     date: "30 April 2026",
     size: "7.4 MB",
-    caption: "A golden memory of pure joy and Panda's unmistakable big-sister charm."
+    caption: "Group ki pehli ghaat trip!!!"
   },
   {
     id: 3,
     driveId: "1LJnij_fFuwdJGU3grA164MorW2pcuCH2",
     fileName: "VID-20260430-WA0298.mp4",
-    title: "Late Night Laughs (Part 2)",
+    title: "Suhana mausam with chantu bantu",
     date: "30 April 2026",
     size: "5.5 MB",
-    caption: "When the clock strikes late and everything turns into uncontrollable giggles."
+    caption: "PArihar didi proud of her chantu bantu."
   },
   {
     id: 4,
     driveId: "10Dsx1SZJAYkqXP6_Z_7MsktFDyz-QH2r",
     fileName: "VID-20260504-WA0159.mp4",
-    title: "May Sunshine & Laughter",
+    title: "Ye to mai hun",
     date: "04 May 2026",
     size: "4.9 MB",
-    caption: "Radiant, high-energy vibes that always brighten the whole room."
+    caption: "Mai record karungi jo karna karo!!!"
   },
   {
     id: 5,
@@ -54,183 +54,138 @@ export const DRIVE_VIDEOS: DriveVideoItem[] = [
     title: "Panda Energy in Full Effect",
     date: "13 May 2026",
     size: "1.9 MB",
-    caption: "Unfiltered, heartwarming, and quintessential Panda."
+    caption: "Bhai ka bithday hai godi lena to banta hai!!"
   }
 ];
 
 // =========================================================================
-// 📸 CANDID PHOTO MEMORIES (15 PHOTOS - ALL EXCLUSIVELY FROM GOOGLE DRIVE FOLDER)
-// Note: Includes the former feature photo moved right here into memories!
-// You can edit the 'caption' property of any photo to hardcode your words.
+// 📸 CLASSIC MOMENTS (14 PHOTOS ARRANGED IN CHRONOLOGICAL ORDER)
+// All titles, captions, and vibes removed per request for a clean gallery.
 // =========================================================================
 export const GALLERY_PHOTOS: PhotoItem[] = [
-  // --- Photo 1: MOVED FEATURE PHOTO (IMG-20260904-WA0052) ---
+  // --- Photo 1: 20 September 2025 (IMG-20250920-WA0035) ---
   {
     id: 1,
-    title: "Golden Hour Glow (Birthday Star)",
-    url: "https://lh3.googleusercontent.com/d/1mIiI5qAYQELgjH8FlIVHU_g-tDYWILmP=w1000",
-    alt: "Panda looking radiant and smiling in warm natural lighting",
-    caption: "The former feature photo, now proudly in memories! Captured in that effortless glow right before turning 22.",
-    date: "04 September 2026",
-    location: "Home Sweet Home",
-    vibe: "Birthday Star Energy 👑"
+    url: "https://lh3.googleusercontent.com/d/1PNcNmdvzRPn8-hTW3ubaWTmftMUT_0XU=w1000",
+    alt: "Nostalgic throwback memory",
+    date: "20 September 2025",
+    location: "Memory Vault"
   },
 
-  // --- Photo 2: (IMG-20260828-WA0023) ---
+  // --- Photo 2: 13 February 2026 (IMG-20260213-WA0051) ---
   {
     id: 2,
-    title: "Late Night Sibling Banter",
-    url: "https://lh3.googleusercontent.com/d/1Zva4_ZBofxhhZX4yv6dLr98OTyiP-PPU=w1000",
-    alt: "Candid warm moment sharing laughs together",
-    caption: "Mid-laugh before she declared she was going to sleep and then stayed awake talking for another hour.",
-    date: "28 August 2026",
-    location: "Late Night Hangout",
-    vibe: "Pure Joy"
+    url: "https://lh3.googleusercontent.com/d/1jwYpw8R-lsQjNdFRInmeAH0CuAJ0x6lh=w1000",
+    alt: "Cozy February moment",
+    date: "13 February 2026",
+    location: "Living Room"
   },
 
-  // --- Photo 3: (IMG-20260728-WA0458) ---
+  // --- Photo 3: 19 March 2026 (IMG-20260319-WA0018) ---
   {
     id: 3,
-    title: "Summer Memories & Smiles",
-    url: "https://lh3.googleusercontent.com/d/1ujVh5t-xh0qPZ5eEPBroWhfgfaH3sqmY=w1000",
-    alt: "Outdoor summer snapshot with relaxed big sister vibes",
-    caption: "Summer days with Panda. The weather was hot, the food was great, and the laughter was loud as ever.",
-    date: "28 July 2026",
-    location: "Summer Afternoon Outing",
-    vibe: "Warm Sunshine"
+    url: "https://lh3.googleusercontent.com/d/1eQcWkfbaoEI3OuyejuBXuUHePjwXfwjn=w1000",
+    alt: "March candid laughter",
+    date: "19 March 2026",
+    location: "Mid-Walk"
   },
 
-  // --- Photo 4: (IMG-20260728-WA0421) ---
+  // --- Photo 4: 19 March 2026 (IMG-20260319-WA0022) ---
   {
     id: 4,
-    title: "The Unapologetic Smirk",
-    url: "https://lh3.googleusercontent.com/d/1fGNrIzn22yOVBw22qFjtj0DlSoBl_XA6=w1000",
-    alt: "Panda smiling playfully right at the camera",
-    caption: "The exact face she makes when she knows she's 100% right about everything.",
-    date: "28 July 2026",
-    location: "Weekend Wander",
-    vibe: "Playful & Iconic"
+    url: "https://lh3.googleusercontent.com/d/1E6C4Rpeaz6j3YJGQ7WM6yDJ0atvt8eum=w1000",
+    alt: "Spring candid smile",
+    date: "19 March 2026",
+    location: "Walking Route"
   },
 
-  // --- Photo 5: (IMG-20260728-WA0374) ---
+  // --- Photo 5: 30 April 2026 (IMG_20260430_211708101_AE) ---
   {
     id: 5,
-    title: "Chilling Like a True Panda",
-    url: "https://lh3.googleusercontent.com/d/1sd8NZeYOBNCtDQaa1zbyTpwKHlnywXKj=w1000",
-    alt: "Comfortable and relaxed moment",
-    caption: "100% bamboo hibernation mode. Nobody relaxes with as much commitment as her.",
-    date: "28 July 2026",
-    location: "Cozy Corner",
-    vibe: "Bamboo Hibernation"
+    url: "https://lh3.googleusercontent.com/d/1jTiChPr2O-uKwjQyZfAj2s90RI_WneBL=w1000",
+    alt: "Big sister portrait",
+    date: "30 April 2026",
+    location: "Out and About"
   },
 
-  // --- Photo 6: (IMG-20260603-WA0042) ---
+  // --- Photo 6: 30 April 2026 (IMG-20260430-WA0296) ---
   {
     id: 6,
-    title: "June Cafe Escapade",
-    url: "https://lh3.googleusercontent.com/d/1M2UojVqwPkMW18ry-WuUxdyZSe2f4oqS=w1000",
-    alt: "Casual afternoon cafe meetup with iced coffee",
-    caption: "Iced drinks, delicious snacks, and 45 minutes of analyzing life problems over pastries.",
-    date: "03 June 2026",
-    location: "Favorite Cafe",
-    vibe: "Coffee & Good Times"
+    url: "https://lh3.googleusercontent.com/d/11suYOrTlZqB9KXDidxqNWe218IAK5CCV=w1000",
+    alt: "April evening laughter",
+    date: "30 April 2026",
+    location: "Dinner Table"
   },
 
-  // --- Photo 7: (IMG-20260603-WA0017) ---
+  // --- Photo 7: 04 May 2026 (IMG-20260504-WA0152) ---
   {
     id: 7,
-    title: "Spontaneous Adventures",
-    url: "https://lh3.googleusercontent.com/d/1ccRRZfI59C-wa87FCOvEbKab7lvB-JG_=w1000",
-    alt: "Spontaneous day out exploring together",
-    caption: "'Let's just step outside for 5 minutes' turned into a full-day adventure full of wrong turns and big laughs.",
-    date: "03 June 2026",
-    location: "City Streets",
-    vibe: "Spontaneous Wanderer"
+    url: "https://lh3.googleusercontent.com/d/1d5cqu0hy-lM73XdVPQtMWsh6Oa5dD41Z=w1000",
+    alt: "May sunshine moment",
+    date: "04 May 2026",
+    location: "Sunny Spot"
   },
 
-  // --- Photo 8: (IMG-20260504-WA0152) ---
+  // --- Photo 8: 03 June 2026 (IMG-20260603-WA0017) ---
   {
     id: 8,
-    title: "May Mood: Radiant & Free",
-    url: "https://lh3.googleusercontent.com/d/1d5cqu0hy-lM73XdVPQtMWsh6Oa5dD41Z=w1000",
-    alt: "Bright and cheerful snapshot",
-    caption: "Every memory with her has this warm, undeniable lightness to it that brightens the whole day.",
-    date: "04 May 2026",
-    location: "Sunny Spot",
-    vibe: "Pure Radiance"
+    url: "https://lh3.googleusercontent.com/d/1ccRRZfI59C-wa87FCOvEbKab7lvB-JG_=w1000",
+    alt: "June spontaneous day out",
+    date: "03 June 2026",
+    location: "City Streets"
   },
 
-  // --- Photo 9: (IMG-20260430-WA0296) ---
+  // --- Photo 9: 03 June 2026 (IMG-20260603-WA0042) ---
   {
     id: 9,
-    title: "April Evening Shenanigans",
-    url: "https://lh3.googleusercontent.com/d/11suYOrTlZqB9KXDidxqNWe218IAK5CCV=w1000",
-    alt: "Evening atmosphere with lively expressions",
-    caption: "Right after she made a joke so funny everyone forgot what we were originally arguing about.",
-    date: "30 April 2026",
-    location: "Dinner Table",
-    vibe: "Unstoppable Laughs"
+    url: "https://lh3.googleusercontent.com/d/1M2UojVqwPkMW18ry-WuUxdyZSe2f4oqS=w1000",
+    alt: "Cafe afternoon meetup",
+    date: "03 June 2026",
+    location: "Favorite Cafe"
   },
 
-  // --- Photo 10: (IMG_20260430_211708101_AE) ---
+  // --- Photo 10: 28 July 2026 (IMG-20260728-WA0374) ---
   {
     id: 10,
-    title: "The Ultimate Big Sister Look",
-    url: "https://lh3.googleusercontent.com/d/1jTiChPr2O-uKwjQyZfAj2s90RI_WneBL=w1000",
-    alt: "Confident, protective elder sister portrait looking directly ahead",
-    caption: "That steady, protective look that makes you feel like everything is going to be completely okay.",
-    date: "30 April 2026",
-    location: "Out and About",
-    vibe: "Fierce Protector"
+    url: "https://lh3.googleusercontent.com/d/1sd8NZeYOBNCtDQaa1zbyTpwKHlnywXKj=w1000",
+    alt: "Relaxed cozy afternoon",
+    date: "28 July 2026",
+    location: "Cozy Corner"
   },
 
-  // --- Photo 11: (IMG-20260319-WA0022) ---
+  // --- Photo 11: 28 July 2026 (IMG-20260728-WA0421) ---
   {
     id: 11,
-    title: "Spring Smiles",
-    url: "https://lh3.googleusercontent.com/d/1E6C4Rpeaz6j3YJGQ7WM6yDJ0atvt8eum=w1000",
-    alt: "Spring day candid picture with natural light",
-    caption: "A genuine, unposed snapshot from March. Natural, beautiful, and effortlessly Panda.",
-    date: "19 March 2026",
-    location: "Walking Route",
-    vibe: "Spring Bloom"
+    url: "https://lh3.googleusercontent.com/d/1fGNrIzn22yOVBw22qFjtj0DlSoBl_XA6=w1000",
+    alt: "Playful candid smile",
+    date: "28 July 2026",
+    location: "Weekend Wander"
   },
 
-  // --- Photo 12: (IMG-20260319-WA0018) ---
+  // --- Photo 12: 28 July 2026 (IMG-20260728-WA0458) ---
   {
     id: 12,
-    title: "The Daily Laugh Check",
-    url: "https://lh3.googleusercontent.com/d/1eQcWkfbaoEI3OuyejuBXuUHePjwXfwjn=w1000",
-    alt: "Mid-conversation laughing portrait",
-    caption: "You can practically hear the decibels in this photo. Unfiltered happiness at its finest.",
-    date: "19 March 2026",
-    location: "Mid-Walk",
-    vibe: "Loud & Sweet"
+    url: "https://lh3.googleusercontent.com/d/1ujVh5t-xh0qPZ5eEPBroWhfgfaH3sqmY=w1000",
+    alt: "Summer outdoor snapshot",
+    date: "28 July 2026",
+    location: "Summer Afternoon Outing"
   },
 
-  // --- Photo 13: (IMG-20260213-WA0051) ---
+  // --- Photo 13: 28 August 2026 (IMG-20260828-WA0023) ---
   {
     id: 13,
-    title: "Cozy February Days",
-    url: "https://lh3.googleusercontent.com/d/1jwYpw8R-lsQjNdFRInmeAH0CuAJ0x6lh=w1000",
-    alt: "Cozy indoor February picture",
-    caption: "Winter chill outside, hot tea inside, and endless talk about future dreams.",
-    date: "13 February 2026",
-    location: "Living Room",
-    vibe: "Winter Warmth"
+    url: "https://lh3.googleusercontent.com/d/1Zva4_ZBofxhhZX4yv6dLr98OTyiP-PPU=w1000",
+    alt: "Late night laughs",
+    date: "28 August 2026",
+    location: "Late Night Hangout"
   },
 
-  // --- Photo 14: (IMG-20250920-WA0035) ---
+  // --- Photo 14: 04 September 2026 (IMG-20260904-WA0052) ---
   {
     id: 14,
-    title: "Throwback Roots",
-    url: "https://lh3.googleusercontent.com/d/1PNcNmdvzRPn8-hTW3ubaWTmftMUT_0XU=w1000",
-    alt: "Classic nostalgic snapshot from the memory archive",
-    caption: "From earlier seasons of life right up to turning 22. One thing never changes: she is our Panda.",
-    date: "20 September 2025",
-    location: "Memory Vault",
-    vibe: "Timeless Bond"
-  },
-
-
+    url: "https://lh3.googleusercontent.com/d/1mIiI5qAYQELgjH8FlIVHU_g-tDYWILmP=w1000",
+    alt: "Panda looking radiant and smiling in warm natural lighting",
+    date: "04 September 2026",
+    location: "Home Sweet Home"
+  }
 ];

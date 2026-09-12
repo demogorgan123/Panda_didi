@@ -117,7 +117,7 @@ export const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Fierce Sister & Protector</span>
+                <span>Fierce Sister &amp; Protector</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
                 <Flame className="w-4 h-4 text-amber-400" />
@@ -137,7 +137,7 @@ export const Hero: React.FC = () => {
                 className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-sm transition-all shadow-lg shadow-emerald-500/20 active:scale-95 cursor-pointer"
               >
                 <Film className="w-4 h-4" />
-                <span>View Memories & Videos</span>
+                <span>View Classic Moments &amp; Videos</span>
                 <ArrowDown className="w-3.5 h-3.5" />
               </a>
 

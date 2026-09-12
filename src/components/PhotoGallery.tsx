@@ -102,13 +102,13 @@ export const PhotoGallery: React.FC = () => {
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 border border-emerald-500/20">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>The Memory Archive • {DRIVE_VIDEOS.length + GALLERY_PHOTOS.length} Total Moments</span>
+          <span>Classic Moments &amp; Videos • {DRIVE_VIDEOS.length + GALLERY_PHOTOS.length} Total</span>
         </div>
         <h2 className="font-display text-3xl sm:text-5xl font-bold text-neutral-100 tracking-tight mb-4">
-          Panda's 22nd Birthday Memories 🎬
+          Classic Moments &amp; Birthday Clips 🎬
         </h2>
         <p className="text-neutral-400 text-base sm:text-lg">
-          Dedicated to Panda on her 22nd birthday: {DRIVE_VIDEOS.length} live video clips and {GALLERY_PHOTOS.length} candid photos preserved exclusively from the Google Drive memory archive.
+          Dedicated to Panda on her 22nd birthday: {DRIVE_VIDEOS.length} live video clips and {GALLERY_PHOTOS.length} candid classic moments arranged in chronological order.
         </p>
       </div>
 
@@ -222,23 +222,23 @@ export const PhotoGallery: React.FC = () => {
       </div>
 
       {/* ========================================================================= */}
-      {/* 2. CANDID PHOTO MEMORIES (STREAMLINED SINGLE-FLOW LAYOUT, NO CATEGORIES)  */}
+      {/* 2. CLASSIC MOMENTS (CHRONOLOGICAL ORDER, STREAMLINED CLEAN LAYOUT)        */}
       {/* ========================================================================= */}
       <div className="mb-8 flex items-center justify-between pb-4 border-b border-neutral-800">
         <div>
           <h3 className="font-display text-2xl font-bold text-neutral-100 flex items-center gap-2">
-            <span>Candid Photo Memories</span>
-            <span className="text-xs font-mono font-normal px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-400 border border-neutral-700">
+            <span>Classic Moments 📷</span>
+            <span className="text-xs font-mono font-normal px-2.5 py-0.5 rounded-full bg-neutral-800 text-neutral-400 border border-neutral-700">
               {GALLERY_PHOTOS.length} photos
             </span>
           </h3>
           <p className="text-xs sm:text-sm text-neutral-400 mt-0.5">
-            A single-flow stream of authentic moments, laughing fits, and sisterly wisdom.
+            Preserved in chronological order from our favorite days together.
           </p>
         </div>
       </div>
 
-      {/* Masonry / Responsive Grid (Streamlined Single-Flow) */}
+      {/* Responsive Grid (Chronological Classic Moments) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
         {GALLERY_PHOTOS.map((photo) => {
           const isLiked = (likes[photo.id] || 0) > 0;
@@ -247,9 +247,9 @@ export const PhotoGallery: React.FC = () => {
               key={photo.id}
               id={`photo-card-${photo.id}`}
               onClick={() => openLightbox(photo.id)}
-              className="group relative bg-neutral-800/60 rounded-2xl overflow-hidden border border-neutral-700/70 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-950/40 cursor-pointer flex flex-col"
+              className="group relative bg-neutral-800/70 rounded-2xl overflow-hidden border border-neutral-700/70 hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-950/40 cursor-pointer flex flex-col"
             >
-              {/* Image Container with Aspect Ratio */}
+              {/* Image Container */}
               <div className="relative aspect-4/3 sm:aspect-square w-full overflow-hidden bg-neutral-900">
                 <img
                   src={photo.url}
@@ -260,75 +260,71 @@ export const PhotoGallery: React.FC = () => {
 
                 {/* Hover overlay hint */}
                 <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-                  <div className="p-2.5 rounded-full bg-neutral-900/90 text-neutral-100 border border-neutral-700 transform scale-75 group-hover:scale-100 transition-transform">
+                  <div className="p-2.5 rounded-full bg-neutral-900/90 text-neutral-100 border border-neutral-700 transform scale-75 group-hover:scale-100 transition-transform shadow-lg">
                     <Maximize2 className="w-5 h-5 text-emerald-400" />
                   </div>
                 </div>
-
-                {/* Vibe pill */}
-                <div className="absolute bottom-3 right-3 z-10">
-                  <span className="px-2 py-0.5 rounded-md bg-neutral-950/80 backdrop-blur-sm text-[10px] text-amber-300 font-medium border border-amber-400/20">
-                    {photo.vibe}
-                  </span>
-                </div>
               </div>
 
-              {/* Photo Information & Caption (Clean, No Category Tags) */}
-              <div className="p-4 flex-1 flex flex-col justify-between">
-                <div>
-                  <h4 className="font-display font-semibold text-base text-neutral-100 group-hover:text-emerald-300 transition-colors line-clamp-1 mb-1.5">
-                    {photo.title}
-                  </h4>
-                  <p className="text-xs text-neutral-400 leading-relaxed line-clamp-3 mb-3">
-                    {photo.caption}
-                  </p>
+              {/* Photo Footer Bar (Clean: Date, Location & Like) */}
+              <div className="p-3.5 flex items-center justify-between text-xs text-neutral-300">
+                <div className="flex items-center gap-1.5 truncate">
+                  <Calendar className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                  <span className="font-medium text-neutral-200 truncate">{photo.date}</span>
+                  {photo.location && (
+                    <>
+                      <span className="text-neutral-600">•</span>
+                      <span className="text-neutral-400 truncate text-[11px]">{photo.location}</span>
+                    </>
+                  )}
                 </div>
 
-                <div className="pt-2 border-t border-neutral-700/50 flex items-center justify-between text-[11px] text-neutral-400">
-                  <div className="flex items-center gap-1 truncate max-w-[150px]">
-                    <Calendar className="w-3 h-3 text-emerald-400 shrink-0" />
-                    <span className="truncate">{photo.date}</span>
-                  </div>
-
-                  {/* Like Button */}
-                  <button
-                    type="button"
-                    id={`like-btn-${photo.id}`}
-                    onClick={(e) => handleLike(photo.id, e)}
-                    className="flex items-center gap-1.5 px-2 py-1 rounded-md hover:bg-neutral-700/60 text-neutral-300 hover:text-rose-400 transition-colors cursor-pointer"
-                  >
-                    <Heart className={`w-3.5 h-3.5 ${isLiked ? 'text-rose-400 fill-rose-400' : ''}`} />
-                    <span className="font-semibold text-xs">{likes[photo.id] || 0}</span>
-                  </button>
-                </div>
+                {/* Like Button */}
+                <button
+                  type="button"
+                  id={`like-btn-${photo.id}`}
+                  onClick={(e) => handleLike(photo.id, e)}
+                  className="flex items-center gap-1.5 px-2.5 py-1 rounded-md hover:bg-neutral-700/60 text-neutral-300 hover:text-rose-400 transition-colors cursor-pointer shrink-0 ml-2"
+                  title="Like moment"
+                >
+                  <Heart className={`w-3.5 h-3.5 ${isLiked ? 'text-rose-400 fill-rose-400' : ''}`} />
+                  <span className="font-semibold text-xs">{likes[photo.id] || 0}</span>
+                </button>
               </div>
             </div>
           );
         })}
       </div>
 
-      {/* Lightbox Modal (Streamlined, No Category Badges) */}
+      {/* Lightbox Modal (Streamlined & Focused on Classic Moments) */}
       {activeLightboxPhoto && (
         <div
           role="dialog"
           aria-modal="true"
-          className="fixed inset-0 z-50 bg-neutral-950/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn"
+          className="fixed inset-0 z-50 bg-neutral-950/95 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn"
           onClick={closeLightbox}
         >
           {/* Lightbox Window */}
           <div
-            className="relative bg-neutral-900 border border-neutral-700 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl"
+            className="relative bg-neutral-900 border border-neutral-800 rounded-2xl max-w-4xl w-full max-h-[92vh] overflow-hidden flex flex-col shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header bar */}
             <div className="flex items-center justify-between px-5 py-3.5 border-b border-neutral-800 bg-neutral-900/90">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                  Memory #{activeLightboxPhoto.id}
+                  Classic Moment #{(selectedPhotoIndex ?? 0) + 1} of {GALLERY_PHOTOS.length}
                 </span>
-                <span className="text-xs text-neutral-400">
-                  {activeLightboxPhoto.vibe}
-                </span>
+                <div className="flex items-center gap-1.5 text-xs text-neutral-400">
+                  <Calendar className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>{activeLightboxPhoto.date}</span>
+                  {activeLightboxPhoto.location && (
+                    <>
+                      <span className="text-neutral-600">•</span>
+                      <span>{activeLightboxPhoto.location}</span>
+                    </>
+                  )}
+                </div>
               </div>
 
               <div className="flex items-center gap-2">
@@ -344,76 +340,50 @@ export const PhotoGallery: React.FC = () => {
               </div>
             </div>
 
-            {/* Lightbox Body: Image + Info */}
-            <div className="flex-1 overflow-y-auto flex flex-col md:flex-row">
-              {/* Main Image */}
-              <div className="relative flex-1 bg-black flex items-center justify-center min-h-[260px] sm:min-h-[400px]">
-                <img
-                  src={activeLightboxPhoto.url}
-                  alt={activeLightboxPhoto.alt}
-                  className="max-h-[65vh] w-auto object-contain mx-auto"
-                />
+            {/* Lightbox Body: Full Photo */}
+            <div className="relative flex-1 bg-black flex items-center justify-center min-h-[300px] sm:min-h-[500px] p-2 sm:p-4">
+              <img
+                src={activeLightboxPhoto.url}
+                alt={activeLightboxPhoto.alt}
+                className="max-h-[72vh] w-auto max-w-full object-contain mx-auto rounded-lg shadow-xl"
+              />
 
-                {/* Prev & Next Floating Buttons */}
+              {/* Prev & Next Floating Buttons */}
+              <button
+                type="button"
+                id="lightbox-prev-btn"
+                onClick={showPrev}
+                className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-white border border-neutral-700 shadow-lg transition-transform hover:scale-110 active:scale-95 cursor-pointer"
+                title="Previous Moment (Left Arrow)"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              <button
+                type="button"
+                id="lightbox-next-btn"
+                onClick={showNext}
+                className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-white border border-neutral-700 shadow-lg transition-transform hover:scale-110 active:scale-95 cursor-pointer"
+                title="Next Moment (Right Arrow)"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* Lightbox Footer Bar */}
+            <div className="px-5 py-3 border-t border-neutral-800 bg-neutral-900/90 flex items-center justify-between">
+              <span className="text-xs text-neutral-500 hidden sm:inline">
+                Use Left / Right arrow keys to navigate
+              </span>
+              <div className="flex items-center gap-3 ml-auto">
                 <button
                   type="button"
-                  id="lightbox-prev-btn"
-                  onClick={showPrev}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-white border border-neutral-700 shadow-lg transition-transform hover:scale-110 active:scale-95 cursor-pointer"
-                  title="Previous Memory (Left Arrow)"
+                  onClick={(e) => handleLike(activeLightboxPhoto.id, e)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold transition-colors cursor-pointer"
                 >
-                  <ChevronLeft className="w-6 h-6" />
+                  <Heart className={`w-4 h-4 ${(likes[activeLightboxPhoto.id] || 0) > 0 ? 'text-rose-400 fill-rose-400' : ''}`} />
+                  <span>{likes[activeLightboxPhoto.id] || 0}</span>
                 </button>
-
-                <button
-                  type="button"
-                  id="lightbox-next-btn"
-                  onClick={showNext}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-neutral-900/80 hover:bg-neutral-800 text-neutral-200 hover:text-white border border-neutral-700 shadow-lg transition-transform hover:scale-110 active:scale-95 cursor-pointer"
-                  title="Next Memory (Right Arrow)"
-                >
-                  <ChevronRight className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Sidebar Description & Memory Details */}
-              <div className="w-full md:w-80 p-5 bg-neutral-900 border-t md:border-t-0 md:border-l border-neutral-800 flex flex-col justify-between">
-                <div>
-                  <h3 className="font-display text-xl font-bold text-neutral-100 mb-3">
-                    {activeLightboxPhoto.title}
-                  </h3>
-
-                  <div className="text-neutral-200 text-base leading-relaxed bg-neutral-800/40 p-4 rounded-xl border border-neutral-700/60 mb-4">
-                    “{activeLightboxPhoto.caption}”
-                  </div>
-
-                  <div className="space-y-2 text-xs text-neutral-400">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>{activeLightboxPhoto.date}</span>
-                    </div>
-                    {activeLightboxPhoto.location && (
-                      <div className="flex items-center gap-2">
-                        <span className="text-amber-400">📍</span>
-                        <span>{activeLightboxPhoto.location}</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-neutral-800 mt-6 flex items-center justify-between">
-                  <span className="text-xs text-neutral-500">
-                    Use Left / Right arrow keys to navigate
-                  </span>
-                  <button
-                    type="button"
-                    onClick={(e) => handleLike(activeLightboxPhoto.id, e)}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold transition-colors cursor-pointer"
-                  >
-                    <Heart className={`w-4 h-4 ${(likes[activeLightboxPhoto.id] || 0) > 0 ? 'text-rose-400 fill-rose-400' : ''}`} />
-                    <span>{likes[activeLightboxPhoto.id] || 0}</span>
-                  </button>
-                </div>
               </div>
             </div>
           </div>

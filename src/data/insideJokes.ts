@@ -3,6 +3,14 @@ import { InsideJoke, MidnightCallScenario } from '../types';
 export const PANDA_FACTS: InsideJoke[] = [
   {
     id: 1,
+    badge: "THE 1-HOUR SNOOZE ⏰",
+    title: "The 5-Stage Wake-Up Protocol",
+    quote: "“Please wake me up early tomorrow! Be strict, don't let me sleep!” *Proceeds to be woken up 5 times over an entire hour, finally opens her eyes, and immediately goes back to sleep.*",
+    context: "A documented true incident in our family lore: I campaigned 4 to 5 times across 60 grueling minutes to wake her up. She took an hour to wake up... only to roll over and snooze again.",
+    reactionCount: 214
+  },
+  {
+    id: 2,
     badge: "BIOLOGY 🎋",
     title: "The Panda Hibernation Law",
     quote: "Can sleep for 14 hours straight, wake up complaining that her bones hurt from resting, and then immediately order iced coffee.",
@@ -350,5 +358,18 @@ export const MIDNIGHT_SCENARIOS: MidnightCallScenario[] = [
       "Panda: 'Big sister intuition. Now drink water and sleep. Goodnight kiddo.'"
     ],
     reaction: "Pure comforting warmth."
+  },
+  {
+    id: 4,
+    time: "07:15 AM",
+    reason: "The 1-Hour Wake-Up Call Incident",
+    dialogue: [
+      "Panda (Night before): 'Please wake me up early tomorrow! Don't let me sleep in, you HAVE to be persistent!'",
+      "Me (Attempt 1 - 07:00 AM): 'Panda, wake up!' -> Panda: 'Mmm 5 more minutes...'",
+      "Me (Attempt 3 - 07:35 AM): 'Panda it’s been 35 minutes! You literally begged me to wake you!' -> Panda: 'I am spiritually awake, my eyelids are just taking a short break.'",
+      "Me (Attempt 5 - 08:00 AM): 'Panda it has been ONE FULL HOUR. Wake up!!' -> Panda: 'Okay okay I am up!' *sits up for 15 seconds, blinks at the wall, immediately falls back asleep*",
+      "Me: 'I tried 5 separate times across a whole hour just for you to roll over and snooze again?! Peak Panda.'"
+    ],
+    reaction: "The greatest sleep endurance record in Panda history."
   }
 ];

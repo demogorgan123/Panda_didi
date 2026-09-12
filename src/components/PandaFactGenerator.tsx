@@ -9,18 +9,13 @@ export const PandaFactGenerator: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isSpinning, setIsSpinning] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
-  const [reactionCounts, setReactionCounts] = useState<Record<number, number>>(() => {
-    const initial: Record<number, number> = {};
-    PANDA_FACTS.forEach((f) => {
-      initial[f.id] = f.reactionCount || 10;
-    });
-    return initial;
-  });
+  const [isLiked, setIsLiked] = useState<boolean>(false);
 
   const currentFact: InsideJoke = PANDA_FACTS[currentIndex];
 
   const rollRandomFact = () => {
     setIsSpinning(true);
+    setIsLiked(false);
     sounds.playChime();
 
     // Quick rolling effect
@@ -43,25 +38,30 @@ export const PandaFactGenerator: React.FC = () => {
 
   const handlePrevFact = () => {
     sounds.playChime();
+    setIsLiked(false);
     setCurrentIndex((prev) => (prev === 0 ? PANDA_FACTS.length - 1 : prev - 1));
   };
 
   const handleNextFact = () => {
     sounds.playChime();
+    setIsLiked(false);
     setCurrentIndex((prev) => (prev === PANDA_FACTS.length - 1 ? 0 : prev + 1));
   };
 
   const handleHeartReaction = () => {
     sounds.playChime();
-    setReactionCounts((prev) => ({
-      ...prev,
-      [currentFact.id]: (prev[currentFact.id] || 0) + 1,
-    }));
+    setIsLiked(true);
+    confetti({
+      particleCount: 25,
+      spread: 40,
+      origin: { y: 0.7 },
+      colors: ['#f43f5e', '#fb7185', '#fda4af']
+    });
   };
 
   const copyFact = async () => {
     try {
-      await navigator.clipboard.writeText(`"${currentFact.quote}" — Panda Fact #${currentFact.id}`);
+      await navigator.clipboard.writeText(`"${currentFact.quote}" — Panda Inside Joke`);
       setCopied(true);
       sounds.playChime();
       setTimeout(() => setCopied(false), 2000);
@@ -76,13 +76,13 @@ export const PandaFactGenerator: React.FC = () => {
       <div className="text-center max-w-2xl mx-auto mb-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 border border-emerald-500/20">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>39 Sister Truths (13 × 3)</span>
+          <span>Sister Truths &amp; Inside Jokes</span>
         </div>
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-neutral-100 tracking-tight mb-3">
-          The 39 Panda Truths & Inside Jokes 🎋
+          Panda Truths &amp; Inside Jokes 🎋
         </h2>
         <p className="text-neutral-400 text-sm sm:text-base">
-          39 reasons why Panda is iconic, hilarious, deeply loved, and the undisputed queen of September 13th.
+          Unfiltered reasons why Panda is iconic, hilarious, deeply loved, and the undisputed queen of September 13th.
         </p>
       </div>
 
@@ -91,16 +91,15 @@ export const PandaFactGenerator: React.FC = () => {
         {/* Decorative Quote Mark */}
         <Quote className="absolute -top-4 -right-4 w-32 h-32 text-neutral-700/20 pointer-events-none" />
 
-        {/* Fact Badge & Number */}
+        {/* Fact Badge */}
         <div className="flex items-center justify-between mb-6">
           <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold tracking-wider border border-emerald-500/30">
             {currentFact.badge}
           </span>
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-neutral-400">
-              Truth {currentIndex + 1} of {PANDA_FACTS.length}
-            </span>
-          </div>
+          <span className="text-xs text-neutral-400 font-medium flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <span>Panda Lore</span>
+          </span>
         </div>
 
         {/* Fact Title */}
@@ -147,10 +146,14 @@ export const PandaFactGenerator: React.FC = () => {
               type="button"
               id="like-fact-btn"
               onClick={handleHeartReaction}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 text-xs font-semibold transition-all active:scale-95 cursor-pointer"
+              className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border text-xs font-semibold transition-all active:scale-95 cursor-pointer ${
+                isLiked
+                  ? 'bg-rose-500/30 text-rose-200 border-rose-400/50 shadow-sm'
+                  : 'bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border-rose-500/30'
+              }`}
             >
-              <Heart className="w-4 h-4 fill-rose-400 text-rose-400" />
-              <span>So True! ({reactionCounts[currentFact.id] || 0})</span>
+              <Heart className={`w-4 h-4 text-rose-400 ${isLiked ? 'fill-rose-400 scale-110' : ''}`} />
+              <span>{isLiked ? 'Loved It! ❤️' : 'So True!'}</span>
             </button>
 
             <button

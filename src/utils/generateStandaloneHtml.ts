@@ -503,29 +503,19 @@ export function getStandaloneHtml(): string {
       </div>
 
       <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
-        <a href="#gallery" class="btn btn-primary">Browse 20 Memories 📸</a>
+        <a href="#gallery" class="btn btn-primary">Browse Classic Moments 📸</a>
         <a href="#story" class="btn btn-secondary">Read The Tribute 💌</a>
       </div>
     </div>
   </header>
 
-  <!-- Gallery (20 Photos) -->
+  <!-- Classic Moments -->
   <section id="gallery" class="gallery-section">
     <div class="container">
       <div class="section-title">
-        <span class="badge">📸 The 20 Archives</span>
-        <h2>20 Unforgettable Panda Moments</h2>
-        <p style="color: var(--text-muted);">From hot-pot food comas to midnight nostalgia calls and big-sister wisdom.</p>
-      </div>
-
-      <!-- Filters -->
-      <div class="filters" id="filter-container">
-        <button class="filter-btn active" onclick="filterGallery('all')">All 20 Photos</button>
-        <button class="filter-btn" onclick="filterGallery('sister')">Sister Instincts 🛡️</button>
-        <button class="filter-btn" onclick="filterGallery('midnight')">Midnight Calls 🌙</button>
-        <button class="filter-btn" onclick="filterGallery('food_sleep')">Food & Sleep 🎋</button>
-        <button class="filter-btn" onclick="filterGallery('chaos')">Pure Chaos ⚡</button>
-        <button class="filter-btn" onclick="filterGallery('milestone')">Milestones 🌸</button>
+        <span class="badge">📸 Classic Moments</span>
+        <h2>Classic Moments &amp; Memories</h2>
+        <p style="color: var(--text-muted);">Preserved in chronological order from our favorite days together.</p>
       </div>
 
       <!-- Grid -->
@@ -544,34 +534,25 @@ export function getStandaloneHtml(): string {
       <div class="story-grid">
         <div class="letter-card">
           <h3 class="font-display" style="font-size: 1.4rem; color: #fff; margin-bottom: 1rem;">
-            To My Favorite Elder Sister,
+            Happy Birthday Parihar / Panda / Didi!
           </h3>
           <p>
-            In every friend group, there is someone who inadvertently becomes the anchor. But in our group,
-            you didn't just become our anchor—you became our <strong>Panda</strong>.
-          </p>
-          <p>
-            You embody the spirit of a panda in the most endearing way imaginable: you possess an Olympic-level
-            dedication to eating and sleeping, yet whenever someone we care about is hurting, you move with ferocious
-            speed to protect them. As the oldest of us, you naturally slipped into the role of my big sister. You make
-            sure everyone eats, you check that we got home safely, and you never let anyone walk all over us.
+            From friends to best friends, and now my big sister—we have truly come a long way. I love how you listen to everything I have to say, whether it is completely sensible or total nonsense. You are my safe space to rant, cry, and just be myself.
           </p>
           <div class="quote-box">
-            “Why work hard for 8 hours when you can finish the whole task in 35 minutes with pure brainpower and sleep for the rest of the day?”
+            “Calling each other every day has become such an indispensable part of my routine that on the days you do not call, I immediately find myself wondering, ‘Where is she busy today?’”
           </div>
           <p>
-            Your <strong>smart-working philosophy</strong> is legendary. While the rest of us panic and overcomplicate things,
-            you casually stroll in with an iced latte, identify the 2 critical shortcuts that eliminate 90% of the effort,
-            and solve the crisis before lunchtime.
+            Thank you for guiding me, helping me, listening patiently, and always making me feel right at home. This bond is forever now because I am your brother, and I love my big sister so much.
           </p>
           <p>
-            And then there are the <strong>midnight phone calls</strong>. At 00:23 AM, my phone will suddenly light up with your name.
-            Not because of an emergency, but simply because you were scrolling through old photo albums, saw a snapshot of us from
-            years ago, and called just to laugh loudly and say, <em>“I missed your goofy face, okay go back to sleep!”</em>
+            I pray to God that success, immense happiness, prosperity, and everything you have ever wished for find their way to you as soon as possible. I trust you completely—I know you will win, and I will stand firm by your side through every bit of hard work and struggle. I promise to be right there in the front row, cheering the loudest and celebrating every single success with you.
           </p>
-          <p style="color: #fff; font-weight: 600;">
-            Thank you for being loud, chaotic, ridiculously smart, and endlessly loving. Happy Birthday, big sis.
-          </p>
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #2e2e38; text-align: right;">
+            <p style="color: #10b981; font-weight: bold; font-size: 1.1rem;">Happy Birthday! 🎂</p>
+            <p style="color: #9ca3af; font-size: 0.9rem; margin-top: 0.25rem;">With lots of love,</p>
+            <p class="font-handwriting" style="color: #fbbf24; font-size: 1.8rem; font-weight: bold; margin-top: 0.15rem;">Pyara Bhai 💖</p>
+          </div>
         </div>
 
         <div>
@@ -680,36 +661,25 @@ export function getStandaloneHtml(): string {
     let currentFactIdx = 0;
 
     // Render Gallery
-    function renderGallery(filter = 'all') {
+    function renderGallery() {
       const grid = document.getElementById('gallery-grid');
       grid.innerHTML = '';
-      const list = filter === 'all' ? photos : photos.filter(p => p.category === filter);
 
-      list.forEach((p) => {
+      photos.forEach((p) => {
         const card = document.createElement('div');
         card.className = 'photo-card';
         card.onclick = () => openLightbox(p.id);
         card.innerHTML = \`
           <img src="\${p.url}" alt="\${p.alt}" class="photo-img" loading="lazy">
           <div class="photo-meta">
-            <div>
-              <div class="photo-title">#\${p.id} \${p.title}</div>
-              <div class="photo-caption">\${p.caption}</div>
-            </div>
-            <div class="photo-footer">
-              <span>\${p.date}</span>
-              <span style="color: #f59e0b;">\${p.vibe}</span>
+            <div class="photo-footer" style="padding: 0.5rem 0.25rem; display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <span style="font-weight: 500; font-size: 0.85rem;">📅 \${p.date}</span>
+              \${p.location ? \`<span style="color: var(--text-muted); font-size: 0.75rem;">\${p.location}</span>\` : ''}
             </div>
           </div>
         \`;
         grid.appendChild(card);
       });
-    }
-
-    function filterGallery(category) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      event.target.classList.add('active');
-      renderGallery(category);
     }
 
     // Lightbox logic
@@ -732,9 +702,9 @@ export function getStandaloneHtml(): string {
       const p = photos[currentPhotoIdx];
       document.getElementById('lb-img').src = p.url;
       document.getElementById('lb-img').alt = p.alt;
-      document.getElementById('lb-badge').innerText = '#' + p.id + ' • ' + (p.vibe || 'Panda Memory');
-      document.getElementById('lb-title').innerText = p.title;
-      document.getElementById('lb-caption').innerText = '“' + p.caption + '”';
+      document.getElementById('lb-badge').innerText = 'Classic Moment #' + (currentPhotoIdx + 1);
+      document.getElementById('lb-title').innerText = p.date;
+      document.getElementById('lb-caption').innerText = p.location ? ('📍 ' + p.location) : '';
       document.getElementById('lb-date').innerText = p.date + (p.location ? ' • ' + p.location : '');
     }
 

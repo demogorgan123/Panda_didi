@@ -35,35 +35,33 @@ export const PandaStory: React.FC = () => {
               <span className="text-3xl">💌</span>
               <div>
                 <h3 className="font-display text-lg font-bold text-neutral-100">
-                  To Panda, With All My Love,
+                  Happy Birthday Parihar / Panda / Didi!
                 </h3>
-                <p className="text-xs text-neutral-400">Written for 13th September to celebrate your 22nd birthday</p>
+                <p className="text-xs text-neutral-400">Written with all my heart for your 22nd birthday on 13th September</p>
               </div>
             </div>
 
             <p>
-              Happy 22nd Birthday to the one and only <strong className="text-emerald-300">Panda</strong>!
+              From friends to best friends, and now my big sister—we have truly come a long way. I love how you listen to everything I have to say, whether it is completely sensible or total nonsense. You are my safe space to rant, cry, and just be myself.
             </p>
 
-            <p>
-              You embody the spirit of a panda in the most endearing way imaginable: you possess an Olympic-level dedication to eating and sleeping, yet whenever I need you, you move with ferocious speed to protect and cheer me up. As my elder sister, you always look out for me. You make sure I eat, you check that I got home safely, and you never let anyone walk over me.
-            </p>
-
-            <div className="p-4 rounded-xl bg-neutral-800/60 border-l-4 border-amber-400 my-4 text-neutral-200 font-medium italic text-base">
-              “Why work hard for 8 hours when you can finish the whole task in 35 minutes with pure brainpower and sleep for the rest of the day?”
+            <div className="p-4 rounded-xl bg-neutral-800/60 border-l-4 border-rose-400 my-4 text-neutral-200 font-medium italic text-base">
+              “Calling each other every day has become such an indispensable part of my routine that on the days you do not call, I immediately find myself wondering, ‘Where is she busy today?’”
             </div>
 
             <p>
-              Your <strong className="text-amber-300">smart-working philosophy</strong> is legendary. While the rest of us panic and overcomplicate things, you casually stroll in with a cup of iced coffee, identify the 2 critical shortcuts that eliminate 90% of the effort, and solve the crisis before lunchtime.
+              Thank you for guiding me, helping me, listening patiently, and always making me feel right at home. This bond is forever now because I am your brother, and I love my big sister so much.
             </p>
 
             <p>
-              And then there are the <strong className="text-rose-300">midnight phone calls</strong>. At 00:23 AM, my phone will suddenly light up with your name. Not because of an emergency, but simply because you were scrolling through old photo albums, saw a snapshot of us from years ago, and called just to laugh loudly and say, <em>“I missed your goofy face, okay go back to sleep!”</em>
+              I pray to God that success, immense happiness, prosperity, and everything you have ever wished for find their way to you as soon as possible. I trust you completely—I know you will win, and I will stand firm by your side through every bit of hard work and struggle. I promise to be right there in the front row, cheering the loudest and celebrating every single success with you.
             </p>
 
-            <p className="text-neutral-100 font-medium">
-              Turning 22 on September 13th is an iconic milestone, but no matter how many years pass, you will always be our compass, our sanctuary, and our real big sister. Happy 22nd Birthday, big sis Panda!
-            </p>
+            <div className="pt-4 border-t border-neutral-800/80 flex flex-col items-end text-right">
+              <p className="font-display text-lg font-bold text-emerald-300">Happy Birthday!</p>
+              <p className="text-sm text-neutral-400 font-medium mt-1">With lots of love,</p>
+              <p className="font-handwriting text-2xl font-bold text-amber-300 mt-0.5">Pyara Bhai 💖</p>
+            </div>
           </div>
 
           {/* Persona Breakdown Cards & "The Panda Formula" */}
