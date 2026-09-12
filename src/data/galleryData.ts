@@ -78,7 +78,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1jwYpw8R-lsQjNdFRInmeAH0CuAJ0x6lh=w1000",
     alt: "Cozy February moment",
     date: "13 February 2026",
-    location: "Living Room"
+    location: "Lab and chill"
   },
 
   // --- Photo 3: 19 March 2026 (IMG-20260319-WA0018) ---
@@ -87,7 +87,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1eQcWkfbaoEI3OuyejuBXuUHePjwXfwjn=w1000",
     alt: "March candid laughter",
     date: "19 March 2026",
-    location: "Mid-Walk"
+    location: "Flauntig the honour-AGAS26"
   },
 
   // --- Photo 4: 19 March 2026 (IMG-20260319-WA0022) ---
@@ -96,7 +96,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1E6C4Rpeaz6j3YJGQ7WM6yDJ0atvt8eum=w1000",
     alt: "Spring candid smile",
     date: "19 March 2026",
-    location: "Walking Route"
+    location: "Flauntig the honour-AGAS26 part2"
   },
 
   // --- Photo 5: 30 April 2026 (IMG_20260430_211708101_AE) ---
@@ -105,7 +105,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1jTiChPr2O-uKwjQyZfAj2s90RI_WneBL=w1000",
     alt: "Big sister portrait",
     date: "30 April 2026",
-    location: "Out and About"
+    location: "Classic pose"
   },
 
   // --- Photo 6: 30 April 2026 (IMG-20260430-WA0296) ---
@@ -114,7 +114,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/11suYOrTlZqB9KXDidxqNWe218IAK5CCV=w1000",
     alt: "April evening laughter",
     date: "30 April 2026",
-    location: "Dinner Table"
+    location: "Cycling and chantu bantu"
   },
 
   // --- Photo 7: 04 May 2026 (IMG-20260504-WA0152) ---
@@ -123,7 +123,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1d5cqu0hy-lM73XdVPQtMWsh6Oa5dD41Z=w1000",
     alt: "May sunshine moment",
     date: "04 May 2026",
-    location: "Sunny Spot"
+    location: "YE to gyo aaj"
   },
 
   // --- Photo 8: 03 June 2026 (IMG-20260603-WA0017) ---
@@ -132,7 +132,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1ccRRZfI59C-wa87FCOvEbKab7lvB-JG_=w1000",
     alt: "June spontaneous day out",
     date: "03 June 2026",
-    location: "City Streets"
+    location: "Hat ja nhi sar phodungi"
   },
 
   // --- Photo 9: 03 June 2026 (IMG-20260603-WA0042) ---
@@ -141,7 +141,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1M2UojVqwPkMW18ry-WuUxdyZSe2f4oqS=w1000",
     alt: "Cafe afternoon meetup",
     date: "03 June 2026",
-    location: "Favorite Cafe"
+    location: "Ghas k dher me sui ki talaash"
   },
 
   // --- Photo 10: 28 July 2026 (IMG-20260728-WA0374) ---
@@ -150,7 +150,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1sd8NZeYOBNCtDQaa1zbyTpwKHlnywXKj=w1000",
     alt: "Relaxed cozy afternoon",
     date: "28 July 2026",
-    location: "Cozy Corner"
+    location: "Gira gira gira...."
   },
 
   // --- Photo 11: 28 July 2026 (IMG-20260728-WA0421) ---
@@ -159,7 +159,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1fGNrIzn22yOVBw22qFjtj0DlSoBl_XA6=w1000",
     alt: "Playful candid smile",
     date: "28 July 2026",
-    location: "Weekend Wander"
+    location: "Dhishoom"
   },
 
   // --- Photo 12: 28 July 2026 (IMG-20260728-WA0458) ---
@@ -168,7 +168,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1ujVh5t-xh0qPZ5eEPBroWhfgfaH3sqmY=w1000",
     alt: "Summer outdoor snapshot",
     date: "28 July 2026",
-    location: "Summer Afternoon Outing"
+    location: "Aja uthake k pheku tujhe!!"
   },
 
   // --- Photo 13: 28 August 2026 (IMG-20260828-WA0023) ---
@@ -177,7 +177,7 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1Zva4_ZBofxhhZX4yv6dLr98OTyiP-PPU=w1000",
     alt: "Late night laughs",
     date: "28 August 2026",
-    location: "Late Night Hangout"
+    location: "Pretty little baby"
   },
 
   // --- Photo 14: 04 September 2026 (IMG-20260904-WA0052) ---
@@ -186,6 +186,6 @@ export const GALLERY_PHOTOS: PhotoItem[] = [
     url: "https://lh3.googleusercontent.com/d/1mIiI5qAYQELgjH8FlIVHU_g-tDYWILmP=w1000",
     alt: "Panda looking radiant and smiling in warm natural lighting",
     date: "04 September 2026",
-    location: "Home Sweet Home"
+    location: "hehe boi"
   }
 ];

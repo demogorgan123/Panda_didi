@@ -102,13 +102,13 @@ export const PhotoGallery: React.FC = () => {
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 border border-emerald-500/20">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Classic Moments &amp; Videos • {DRIVE_VIDEOS.length + GALLERY_PHOTOS.length} Total</span>
+          <span>Classic Moments • Friends to Best Friends to Big Sister</span>
         </div>
         <h2 className="font-display text-3xl sm:text-5xl font-bold text-neutral-100 tracking-tight mb-4">
           Classic Moments &amp; Birthday Clips 🎬
         </h2>
         <p className="text-neutral-400 text-base sm:text-lg">
-          Dedicated to Panda on her 22nd birthday: {DRIVE_VIDEOS.length} live video clips and {GALLERY_PHOTOS.length} candid classic moments arranged in chronological order.
+          Dedicated to Parihar / Panda / Didi on her 22nd birthday: {DRIVE_VIDEOS.length} birthday videos and {GALLERY_PHOTOS.length} candid classic moments arranged in chronological order across our journey.
         </p>
       </div>
 

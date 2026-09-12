@@ -45,11 +45,11 @@ export const MidnightCallWidget: React.FC = () => {
           <span>Interactive Feature</span>
         </div>
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-neutral-100 tracking-tight mb-3">
-          The 00:00 AM Midnight Call Simulator
+          Daily Calls &amp; Safe Space Hotline 📞
         </h2>
         <p className="text-neutral-400 text-sm sm:text-base">
-          Experience what it feels like to be Panda's younger sibling at midnight. 
-          Pick a scenario below and answer her incoming ring!
+          “Calling each other every day has become such an indispensable part of my routine.” 
+          Pick a scenario below to experience our daily check-ins, rants, and advice!
         </p>
 
         {/* Scenario selectors */}
@@ -91,7 +91,7 @@ export const MidnightCallWidget: React.FC = () => {
           <span>{scenario.time}</span>
           <span className="flex items-center gap-1">
             <Moon className="w-3 h-3 text-amber-300" />
-            <span>Do Not Disturb (Overridden by Big Sis)</span>
+            <span>Priority Sibling Line 💖</span>
           </span>
         </div>
 
@@ -110,10 +110,10 @@ export const MidnightCallWidget: React.FC = () => {
               </span>
             </div>
             <h3 className="font-display text-xl font-bold text-neutral-100">
-              Panda 🐼
+              Parihar / Panda / Didi 🐼
             </h3>
             <p className="text-xs text-neutral-400 mt-1 mb-6">
-              Status: In bed scrolling through old memories at 00:23 AM 🌙
+              Status: Calling each other every day — our indispensable routine 📞
             </p>
 
             <button
@@ -123,7 +123,7 @@ export const MidnightCallWidget: React.FC = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-rose-500 hover:bg-rose-400 text-white font-bold text-sm transition-all shadow-lg shadow-rose-500/30 active:scale-95 cursor-pointer"
             >
               <PhoneCall className="w-4 h-4 animate-bounce" />
-              <span>Simulate Incoming Call 📞</span>
+              <span>Simulate Sibling Call 📞</span>
             </button>
           </div>
         )}
@@ -143,10 +143,10 @@ export const MidnightCallWidget: React.FC = () => {
               </span>
             </div>
             <h3 className="font-display text-2xl font-bold text-neutral-100">
-              Panda 🐼
+              Parihar / Panda / Didi 🐼
             </h3>
             <p className="text-xs text-rose-300 font-semibold tracking-wide uppercase mt-1 mb-8 animate-bounce">
-              Incoming Midnight Call...
+              Incoming Call from Big Sis...
             </p>
 
             <div className="flex items-center justify-around gap-6 pt-4">
@@ -159,7 +159,7 @@ export const MidnightCallWidget: React.FC = () => {
                 <div className="w-14 h-14 rounded-full bg-neutral-800 group-hover:bg-neutral-700 text-neutral-300 flex items-center justify-center transition-colors">
                   <PhoneOff className="w-6 h-6" />
                 </div>
-                <span className="text-xs text-neutral-400">Sleep (No Way)</span>
+                <span className="text-xs text-neutral-400">Decline (Never!)</span>
               </button>
 
               <button
@@ -189,7 +189,7 @@ export const MidnightCallWidget: React.FC = () => {
                 />
                 <div>
                   <h4 className="font-bold text-sm text-neutral-100 flex items-center gap-1">
-                    <span>Panda (Big Sis)</span>
+                    <span>Parihar / Panda / Didi</span>
                     <span className="text-xs">🐼</span>
                   </h4>
                   <p className="text-[11px] text-emerald-400 font-mono">00:01 • Connected</p>

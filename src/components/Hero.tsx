@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-800/90 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold shadow-sm">
             <span className="text-base animate-bounce">🎋</span>
-            <span>13th September • Turning 22 • Happy Birthday Panda! 🐼</span>
+            <span>13th September • Turning 22 • Happy Birthday Parihar / Panda / Didi! 🐼</span>
             <span className="text-base">🎂</span>
           </div>
         </div>
@@ -96,36 +96,40 @@ export const Hero: React.FC = () => {
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-neutral-50 mb-5 leading-tight">
               Happy 22nd Birthday,{' '}
               <span className="relative inline-block text-emerald-400 underline decoration-wavy decoration-emerald-500/40 underline-offset-8">
-                Panda!
+                Parihar / Panda / Didi!
               </span>
               <span className="inline-block ml-3 animate-wiggle">🎂</span>
             </h1>
 
-            {/* Main Birthday Wish Message */}
+            {/* Main Birthday Wish Message based directly on letter */}
             <p className="text-base sm:text-lg lg:text-xl text-neutral-300 font-normal leading-relaxed mb-6">
-              Celebrating <strong className="text-emerald-300 font-semibold">22 legendary years</strong> of Panda! 
-              The mastermind of <span className="text-emerald-300 font-medium">smart-working shortcuts</span>, 
-              the reigning hot pot champion, my fiercely protective big sister, and the queen of <span className="text-amber-300 font-medium">00:00 AM random nostalgia calls</span>. 
-              This entire website is dedicated to you, Panda!
+              From friends to best friends, and now my big sister—we have truly come a long way. 
+              Celebrating <strong className="text-emerald-300 font-semibold">22 wonderful years</strong> of 
+              my safe space to rant, cry, and be myself, our indispensable daily call routine, and the sister I know will win at everything. 
+              This entire website is dedicated to you!
             </p>
 
-            {/* Key Persona Badges */}
+            {/* Key Persona Badges based directly on letter */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-8 text-xs sm:text-sm">
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/50 border border-emerald-500/40 text-emerald-200 font-medium">
                 <span className="text-amber-300">🎂</span>
                 <span>Turning 22 on 13th Sept</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
+                <Heart className="w-4 h-4 text-rose-400 fill-rose-400" />
+                <span>Friends → Best Friends → Big Sister</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Fierce Sister &amp; Protector</span>
+                <span>My Safe Space to Rant &amp; Cry</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
-                <Flame className="w-4 h-4 text-amber-400" />
-                <span>Smart Work &gt; Hard Work</span>
+                <PhoneCall className="w-4 h-4 text-amber-400" />
+                <span>Daily Call Indispensable Routine</span>
               </div>
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800/80 border border-neutral-700 text-neutral-200">
-                <PhoneCall className="w-4 h-4 text-rose-400" />
-                <span>00:00 AM Nostalgia Caller</span>
+                <Sparkles className="w-4 h-4 text-emerald-300" />
+                <span>Front Row Cheerer Forever</span>
               </div>
             </div>
 
@@ -217,10 +221,10 @@ export const Hero: React.FC = () => {
                 {/* Keepsake Caption Area */}
                 <div className="mt-4 text-center">
                   <p className="text-xs sm:text-sm font-medium text-neutral-200 italic leading-snug mb-1">
-                    “Radiant smiles, endless memories & another wonderful chapter.”
+                    “This bond is forever now because I am your brother, and I love my big sister so much.”
                   </p>
                   <p className="text-[11px] text-neutral-400">
-                    September 13th • Celebrating Queen Panda 🐼
+                    September 13th • Celebrating Parihar / Panda / Didi 🐼
                   </p>
                 </div>
               </div>

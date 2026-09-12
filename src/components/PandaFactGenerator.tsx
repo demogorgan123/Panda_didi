@@ -76,13 +76,13 @@ export const PandaFactGenerator: React.FC = () => {
       <div className="text-center max-w-2xl mx-auto mb-10">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-3 border border-emerald-500/20">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Sister Truths &amp; Inside Jokes</span>
+          <span>Sister Truths &amp; Sibling Lore</span>
         </div>
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-neutral-100 tracking-tight mb-3">
-          Panda Truths &amp; Inside Jokes 🎋
+          Sibling Lore &amp; Inside Truths 🎋
         </h2>
         <p className="text-neutral-400 text-sm sm:text-base">
-          Unfiltered reasons why Panda is iconic, hilarious, deeply loved, and the undisputed queen of September 13th.
+          From sensible talks to complete nonsense, daily calls, and funny habits—explore the lore of Parihar / Panda / Didi.
         </p>
       </div>
 

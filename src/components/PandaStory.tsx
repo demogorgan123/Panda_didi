@@ -17,13 +17,13 @@ export const PandaStory: React.FC = () => {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 text-rose-300 text-xs font-semibold uppercase tracking-wider mb-3 border border-rose-500/20">
             <Heart className="w-3.5 h-3.5 fill-rose-400" />
-            <span>Dedicated to Panda on Her 22nd Birthday</span>
+            <span>Dedicated to Parihar / Panda / Didi on Her 22nd Birthday</span>
           </div>
           <h2 className="font-display text-3xl sm:text-5xl font-bold text-neutral-100 tracking-tight mb-4">
-            Happy 22nd Birthday, Panda! 🐼
+            A Letter From Your Brother 💌
           </h2>
           <p className="text-neutral-400 text-base sm:text-lg">
-            Celebrating 22 years of the loudest, sweetest, cleverest big sister on September 13th.
+            From friends to best friends, and now my big sister—written with all my heart on 13th September.
           </p>
         </div>
 
@@ -60,87 +60,79 @@ export const PandaStory: React.FC = () => {
             <div className="pt-4 border-t border-neutral-800/80 flex flex-col items-end text-right">
               <p className="font-display text-lg font-bold text-emerald-300">Happy Birthday!</p>
               <p className="text-sm text-neutral-400 font-medium mt-1">With lots of love,</p>
-              <p className="font-handwriting text-2xl font-bold text-amber-300 mt-0.5">Pyara Bhai 💖</p>
+              <p className="font-handwriting text-2xl font-bold text-amber-300 mt-0.5">Your Brother 💖</p>
             </div>
           </div>
 
-          {/* Persona Breakdown Cards & "The Panda Formula" */}
+          {/* Pillars of Our Bond (from the letter) */}
           <div className="lg:col-span-5 space-y-5">
-            {/* The Panda Formula */}
+            {/* The 4 Pillars Card */}
             <div className="bg-neutral-900/90 rounded-2xl p-6 border border-emerald-500/20 shadow-lg">
               <h4 className="font-display text-lg font-bold text-neutral-100 mb-4 flex items-center gap-2">
-                <span>The Official Panda Formula</span>
-                <span className="text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Verified</span>
+                <span>The 4 Pillars of Our Bond</span>
+                <span className="text-xs px-2 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/30">Forever</span>
               </h4>
 
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span className="text-neutral-300 flex items-center gap-1">
-                      <Coffee className="w-3.5 h-3.5 text-emerald-400" /> Food & Bamboo Hibernation
-                    </span>
-                    <span className="text-emerald-400">40%</span>
+              <div className="space-y-4 text-sm">
+                <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-700/60">
+                  <div className="flex items-center gap-2 font-semibold text-rose-300 mb-1">
+                    <Shield className="w-4 h-4 text-rose-400" />
+                    <span>1. Safe Space to Rant &amp; Be Myself</span>
                   </div>
-                  <div className="h-2 rounded-full bg-neutral-800 overflow-hidden">
-                    <div className="h-full bg-emerald-500 rounded-full w-[40%]" />
-                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed">
+                    Listening patiently to everything I have to say, whether completely sensible or total nonsense.
+                  </p>
                 </div>
 
-                <div>
-                  <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span className="text-neutral-300 flex items-center gap-1">
-                      <Zap className="w-3.5 h-3.5 text-amber-400" /> Smart-Working Clever Hacks
-                    </span>
-                    <span className="text-amber-400">35%</span>
+                <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-700/60">
+                  <div className="flex items-center gap-2 font-semibold text-amber-300 mb-1">
+                    <Moon className="w-4 h-4 text-amber-400" />
+                    <span>2. Indispensable Daily Calls</span>
                   </div>
-                  <div className="h-2 rounded-full bg-neutral-800 overflow-hidden">
-                    <div className="h-full bg-amber-400 rounded-full w-[35%]" />
-                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed">
+                    Calling each other every single day. If you don't call, I instantly wonder: “Where is she busy today?”
+                  </p>
                 </div>
 
-                <div>
-                  <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span className="text-neutral-300 flex items-center gap-1">
-                      <Moon className="w-3.5 h-3.5 text-rose-400" /> Midnight Nostalgia Rings
-                    </span>
-                    <span className="text-rose-400">15%</span>
+                <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-700/60">
+                  <div className="flex items-center gap-2 font-semibold text-emerald-300 mb-1">
+                    <Coffee className="w-4 h-4 text-emerald-400" />
+                    <span>3. Guiding &amp; Feeling Right at Home</span>
                   </div>
-                  <div className="h-2 rounded-full bg-neutral-800 overflow-hidden">
-                    <div className="h-full bg-rose-400 rounded-full w-[15%]" />
-                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed">
+                    Guiding me, helping me, listening patiently, and always making me feel right at home.
+                  </p>
                 </div>
 
-                <div>
-                  <div className="flex justify-between text-xs font-semibold mb-1">
-                    <span className="text-neutral-300 flex items-center gap-1">
-                      <Shield className="w-3.5 h-3.5 text-sky-400" /> Fierce Big Sister Protection
-                    </span>
-                    <span className="text-sky-400">10%</span>
+                <div className="p-3 rounded-xl bg-neutral-800/50 border border-neutral-700/60">
+                  <div className="flex items-center gap-2 font-semibold text-sky-300 mb-1">
+                    <Zap className="w-4 h-4 text-sky-400" />
+                    <span>4. Front Row Cheering Forever</span>
                   </div>
-                  <div className="h-2 rounded-full bg-neutral-800 overflow-hidden">
-                    <div className="h-full bg-sky-400 rounded-full w-[10%]" />
-                  </div>
+                  <p className="text-xs text-neutral-300 leading-relaxed">
+                    I trust you completely—I know you will win, and I'll be in the front row cheering the loudest!
+                  </p>
                 </div>
               </div>
 
               <p className="text-[11px] text-neutral-400 mt-4 italic text-center">
-                *Total: 100% Irreplaceable Big Sister Energy
+                “This bond is forever now because I am your brother.”
               </p>
             </div>
 
-            {/* Handwritten Sister Post-it Note */}
+            {/* Handwritten Brother's Promise Sticky Note */}
             <div className="bg-amber-100 text-neutral-900 p-5 rounded-2xl shadow-lg rotate-1 transform hover:rotate-0 transition-transform">
               <div className="flex items-center justify-between border-b border-amber-300 pb-2 mb-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-900 font-display">
-                  📌 Elder Sister Rule #1
+                  📌 A Brother's Eternal Promise
                 </span>
-                <span className="text-lg">🐼</span>
+                <span className="text-lg">💖</span>
               </div>
               <p className="font-handwriting text-2xl font-bold leading-snug">
-                “Whenever life gets chaotic, remember: I am older than you, I have seen it all, and nobody gets to make you sad while I have breath in my lungs.”
+                “I trust you completely—I know you will win, and I will stand firm by your side through every bit of hard work and struggle. Front row cheering guaranteed!”
               </p>
               <p className="text-right text-xs font-bold text-amber-800 mt-2">
-                — Your Big Sis Panda
+                — Tera Bhai Forever 🐼
               </p>
             </div>
           </div>

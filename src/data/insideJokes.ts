@@ -3,6 +3,38 @@ import { InsideJoke, MidnightCallScenario } from '../types';
 export const PANDA_FACTS: InsideJoke[] = [
   {
     id: 1,
+    badge: "FROM FRIENDS TO SISTER 💖",
+    title: "Friends → Best Friends → Big Sister",
+    quote: "“From friends to best friends, and now my big sister—we have truly come a long way. This bond is forever now because I am your brother, and I love my big sister so much.”",
+    context: "The core truth of our journey: we started as friends, grew into best friends, and now she is my irreplaceable big sister forever.",
+    reactionCount: 320
+  },
+  {
+    id: 2,
+    badge: "THE SAFE SPACE 🛡️",
+    title: "Sensible or Total Nonsense",
+    quote: "“I love how you listen to everything I have to say, whether it is completely sensible or total nonsense. You are my safe space to rant, cry, and just be myself.”",
+    context: "Zero judgment, 100% patient listening. Whatever chaotic thought or emotion I bring to her, she always makes me feel right at home.",
+    reactionCount: 295
+  },
+  {
+    id: 3,
+    badge: "DAILY CALL ROUTINE 📞",
+    title: "Where Is She Busy Today?",
+    quote: "“Calling each other every day has become such an indispensable part of my routine that on the days you do not call, I immediately find myself wondering, 'Where is she busy today?'”",
+    context: "The universal law of our sibling dynamic: a single day without our daily call throws the entire universe off balance.",
+    reactionCount: 280
+  },
+  {
+    id: 4,
+    badge: "FRONT ROW PROMISE 📣",
+    title: "I Know You Will Win",
+    quote: "“I trust you completely—I know you will win, and I will stand firm by your side through every bit of hard work and struggle. I promise to be right there in the front row cheering the loudest!”",
+    context: "No matter how big the obstacle or dream, her younger brother will always be right in the front row celebrating every single success.",
+    reactionCount: 310
+  },
+  {
+    id: 5,
     badge: "THE 1-HOUR SNOOZE ⏰",
     title: "The 5-Stage Wake-Up Protocol",
     quote: "“Please wake me up early tomorrow! Be strict, don't let me sleep!” *Proceeds to be woken up 5 times over an entire hour, finally opens her eyes, and immediately goes back to sleep.*",
@@ -326,38 +358,39 @@ export const PANDA_FACTS: InsideJoke[] = [
 export const MIDNIGHT_SCENARIOS: MidnightCallScenario[] = [
   {
     id: 1,
-    time: "00:14 AM",
-    reason: "Looking through 2021 photo albums",
+    time: "Daily Call",
+    reason: "Where is she busy today?",
     dialogue: [
-      "Panda: 'HELLO?? Wake up!!'",
-      "Me: '...Panda, it’s 12:15 AM on a Wednesday...'",
-      "Panda: 'Look at the photo I just sent you on chat right NOW! Look at your bangs in 2021! I am literally wheezing on the floor!'",
-      "Me: 'Did you really wake me up for this??'",
-      "Panda: 'Yes!! And also I missed you so answer faster next time. Go back to sleep, love you!'"
+      "Me: 'Didi! The evening rolled around and I hadn't heard from you, so I immediately caught myself wondering: Where is she busy today?'",
+      "Panda: 'Aww, did someone miss their big sister's daily call?'",
+      "Me: 'Calling each other every single day is literally an indispensable part of my routine!'",
+      "Panda: 'Haha, you know I’d never forget to call you! How was your day? Tell me everything!'"
     ],
-    reaction: "Hang up with a smile and zero regrets."
+    reaction: "The daily call that keeps both of us grounded."
   },
   {
     id: 2,
-    time: "01:03 AM",
-    reason: "Late Night Food Crisis",
+    time: "Safe Space",
+    reason: "Sensible or Total Nonsense",
     dialogue: [
-      "Panda: 'Question of national importance: Spicy ramen or leftover dumpling soup?'",
-      "Me: 'Panda, shouldn't you be asleep?'",
-      "Panda: 'Pandas don't sleep on an empty stomach, it’s against my biological programming. I'm making both. Do you want me to drop some off?'"
+      "Me: 'Hey Didi, can I rant to you for a second? Fair warning: this might sound sensible or it might be complete nonsense.'",
+      "Panda: 'You know you never have to ask. Whether it's pure logic or total nonsense, I am always here to listen patiently.'",
+      "Me: 'You really are my safe space to rant, cry, and just be myself.'",
+      "Panda: 'Always. That’s what a big sister is for. Now go ahead, let it all out!'"
     ],
-    reaction: "Best big sister emergency delivery service."
+    reaction: "The purest big-sister warmth."
   },
   {
     id: 3,
-    time: "11:58 PM",
-    reason: "Elder Sister Advice Hotline",
+    time: "Front Row",
+    reason: "I Know You Will Win",
     dialogue: [
-      "Panda: 'I had a feeling you were stressing about work tomorrow. Don't stress. You're brilliant, you're capable, and if they give you grief, tell me and I'll deal with them.'",
-      "Me: 'How did you know I was stressing?'",
-      "Panda: 'Big sister intuition. Now drink water and sleep. Goodnight kiddo.'"
+      "Panda: 'Today was tough... so much hard work and struggle ahead.'",
+      "Me: 'Listen to me Didi: I trust you completely. I know you will win, and I will stand firm right by your side.'",
+      "Panda: 'Thank you... that honestly gives me so much strength.'",
+      "Me: 'I promise I will be right there in the front row, cheering the loudest and celebrating every single success with you!'"
     ],
-    reaction: "Pure comforting warmth."
+    reaction: "Unshakable sibling loyalty and belief."
   },
   {
     id: 4,
@@ -371,5 +404,16 @@ export const MIDNIGHT_SCENARIOS: MidnightCallScenario[] = [
       "Me: 'I tried 5 separate times across a whole hour just for you to roll over and snooze again?! Peak Panda.'"
     ],
     reaction: "The greatest sleep endurance record in Panda history."
+  },
+  {
+    id: 5,
+    time: "00:14 AM",
+    reason: "Late Night Memory Lane",
+    dialogue: [
+      "Panda: 'HELLO?? Wake up!! Look at the old photo I just sent you on chat right NOW! Look at us back then!'",
+      "Me: '...Didi, it’s 12:15 AM... did you really wake me up to reminisce?'",
+      "Panda: 'From friends to best friends to big sister—look how far we’ve come! Okay now go back to sleep, love you!'"
+    ],
+    reaction: "A midnight smile that lasts all week."
   }
 ];
